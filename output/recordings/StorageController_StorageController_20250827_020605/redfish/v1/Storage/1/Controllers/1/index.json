@@ -1,0 +1,80 @@
+{
+  "@odata.type": "#StorageController.v1_19_0.StorageController",
+  "@odata.id": "/redfish/v1/Storage/1/Controllers/1",
+  "Id": "1",
+  "Name": "Enterprise NVMe Storage Controller",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Manufacturer": "SNIA Reference Systems",
+  "Model": "SRX-9800NVMe",
+  "SerialNumber": "SRX9800NVME-2025082701",
+  "FirmwareVersion": "5.4.2-Redfish-Enterprise",
+  "SupportedControllerProtocols": [
+    "NVMe",
+    "SCSI",
+    "PCIe"
+  ],
+  "SupportedDeviceProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "Identifiers": [
+    {
+      "DurableNameFormat": "NAA",
+      "DurableName": "naa.5001405a5b6c7d8e"
+    }
+  ],
+  "Links": {
+    "Storage": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1"
+      }
+    ],
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Drives/2"
+      }
+    ]
+  },
+  "PCIeInterface": {
+    "PCIeType": "Gen5",
+    "Lanes": 16
+  },
+  "CacheSummary": {
+    "CacheMemorySizeMiB": 32768,
+    "PersistentCacheSizeMiB": 4096
+  },
+  "Actions": {
+    "#StorageController.Reset": {
+      "target": "/redfish/v1/Storage/1/Controllers/1/Actions/StorageController.Reset",
+      "ResetType@Redfish.AllowableValues": [
+        "ForceRestart",
+        "GracefulRestart"
+      ]
+    }
+  },
+  "SNIA_Swordfish": {
+    "ControllerCapabilities": {
+      "MaxIOPS": 1500000,
+      "MaxBandwidthMBps": 25000,
+      "RAIDSupport": [
+        "RAID0",
+        "RAID1",
+        "RAID5",
+        "RAID6",
+        "RAID10"
+      ],
+      "DataAtRestEncryption": true,
+      "DataInTransitEncryption": true,
+      "ThinProvisioningSupport": true,
+      "NVMeoFSupport": true
+    }
+  }
+}

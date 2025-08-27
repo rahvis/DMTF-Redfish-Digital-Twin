@@ -1,0 +1,144 @@
+{
+  "@odata.type": "#StoragePool.v1_7_0.StoragePool",
+  "@odata.id": "/redfish/v1/Storage/1/StoragePools/3",
+  "Id": "Pool3",
+  "Name": "Enterprise NVMe Storage Pool 3",
+  "Description": "High-availability NVMe Storage Pool for critical workloads. Supports multi-tenant, multi-protocol access and advanced data services.",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Capacity": {
+    "AllocatedBytes": 2058588211200,
+    "ConsumedBytes": 1782579200000,
+    "GuaranteedBytes": 2147483648000,
+    "ProvisionedBytes": 4294967296000,
+    "DataReductionEnabled": true,
+    "DataReductionRatio": 2.05,
+    "DataProtectionLineage": [
+      "RAID6",
+      "LocalSnapshot",
+      "Replication"
+    ]
+  },
+  "CapacitySources": [
+    {
+      "ProvidedCapacity": {
+        "AllocatedBytes": 2058588211200,
+        "ConsumedBytes": 1782579200000,
+        "GuaranteedBytes": 2147483648000,
+        "ProvisionedBytes": 4294967296000
+      },
+      "Resource@odata.id": "/redfish/v1/StorageServices/1/Drives/NVMe1"
+    },
+    {
+      "ProvidedCapacity": {
+        "AllocatedBytes": 1073741824000,
+        "ConsumedBytes": 900719925474,
+        "GuaranteedBytes": 1073741824000,
+        "ProvisionedBytes": 2147483648000
+      },
+      "Resource@odata.id": "/redfish/v1/StorageServices/1/Drives/NVMe2"
+    }
+  ],
+  "IOStatistics": {
+    "ReadIOs": 823000000,
+    "WriteIOs": 644500000,
+    "ReadBytes": 12345678901234,
+    "WriteBytes": 10111213141516,
+    "ReadHitIOs": 700000000,
+    "WriteHitIOs": 600000000,
+    "ReadLatencyMicroseconds": {
+      "Min": 85,
+      "Max": 1600,
+      "Average": 310
+    },
+    "WriteLatencyMicroseconds": {
+      "Min": 87,
+      "Max": 1750,
+      "Average": 328
+    }
+  },
+  "SupportedAccessCapabilities": [
+    "Read",
+    "Write",
+    "Snapshot",
+    "Clone",
+    "ThinProvisioned",
+    "Compression",
+    "Deduplication",
+    "EncryptionAtRest",
+    "Replication",
+    "NVMeoF"
+  ],
+  "StoragePoolType": "ThinProvisioned",
+  "StorageCapacity": {
+    "TotalBytes": 4294967296000,
+    "UsedBytes": 2058588211200,
+    "GuaranteedBytes": 2147483648000
+  },
+  "DataProtection": {
+    "RaidType": "RAID6",
+    "SnapshotsEnabled": true,
+    "ReplicationEnabled": true,
+    "Encryption": {
+      "EncryptionTypes": [
+        "AES-256-XTS",
+        "FIPS140-2"
+      ],
+      "EncryptionStatus": "Enabled"
+    }
+  },
+  "Links": {
+    "MemberOfStorageResourceSets": [
+      {
+        "@odata.id": "/redfish/v1/StorageResourceSets/1"
+      }
+    ],
+    "AllocatedVolumes": [
+      {
+        "@odata.id": "/redfish/v1/StorageServices/1/Volumes/VolA"
+      },
+      {
+        "@odata.id": "/redfish/v1/StorageServices/1/Volumes/VolB"
+      }
+    ],
+    "ProvidingPools": [
+      {
+        "@odata.id": "/redfish/v1/StoragePools/Pool1"
+      },
+      {
+        "@odata.id": "/redfish/v1/StoragePools/Pool2"
+      }
+    ],
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/StorageServices/1/Drives/NVMe1"
+      },
+      {
+        "@odata.id": "/redfish/v1/StorageServices/1/Drives/NVMe2"
+      }
+    ]
+  },
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_2_0.StoragePoolExtensions",
+      "TieringPolicy": "Auto",
+      "QoS": {
+        "MaxIOPS": 2500000,
+        "MaxBandwidthBytesPerSecond": 4000000000,
+        "MinIOPS": 500000
+      },
+      "PerformanceClass": "Enterprise",
+      "MediaTypes": [
+        "NVMe",
+        "SSD"
+      ],
+      "ComposabilityEnabled": true,
+      "NVMeoFEnabled": true,
+      "CXLReady": true,
+      "TelemetryEnabled": true
+    }
+  }
+}

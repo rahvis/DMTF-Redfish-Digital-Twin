@@ -1,0 +1,79 @@
+{
+  "@odata.type": "#Drive.v1_19_0.Drive",
+  "@odata.id": "/redfish/v1/Storage/1/Drives/3",
+  "Id": "3",
+  "Name": "Enterprise NVMe SSD 3.84TB",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 3840000000000,
+  "Protocol": "NVMe",
+  "MediaType": "SSD",
+  "Manufacturer": "SNIA-Enterprise",
+  "Model": "SNIA-NVMe-3.8TB-G5",
+  "SerialNumber": "SNIA2025SDC3840003",
+  "BlockSizeBytes": 4096,
+  "RotationSpeedRPM": 0,
+  "EncryptionAbility": "SelfEncryptingDrive",
+  "EncryptionStatus": "Unlocked",
+  "HotspareType": "None",
+  "FailurePredicted": false,
+  "Identifiers": [
+    {
+      "DurableName": "5000C500AABBCCDD",
+      "DurableNameFormat": "NAA"
+    }
+  ],
+  "StatusIndicator": "OK",
+  "Location": [
+    {
+      "Info": "Rear Bay 3",
+      "InfoFormat": "Bay"
+    }
+  ],
+  "NegotiatedSpeedGbs": 64,
+  "NegotiatedPCIeSpeedGTps": 16.0,
+  "PCIeInterface": {
+    "PCIeType": "Gen5",
+    "Lanes": 4
+  },
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.DriveExtensions",
+      "EnduranceBytes": 7000000000000,
+      "PowerOnHours": 1520,
+      "WearStatus": "Normal",
+      "TemperatureCelsius": 32,
+      "SMARTStatus": "OK",
+      "NVMeNamespaceCount": 1,
+      "NVMeControllerId": "01A3",
+      "DataUnitsRead": 1854321,
+      "DataUnitsWritten": 1587532,
+      "UncorrectableErrors": 0,
+      "CorrectedErrors": 2
+    }
+  },
+  "Operations": [
+    {
+      "OperationName": "FirmwareUpdate",
+      "PercentageComplete": 100,
+      "AssociatedTask": {
+        "@odata.id": "/redfish/v1/TaskService/Tasks/12"
+      }
+    }
+  ],
+  "Links": {
+    "Volumes": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Volumes/2"
+      }
+    ],
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "@odata.type": "#StoragePool.v1_8_0.StoragePool",
+  "@odata.id": "/redfish/v1/Storage/1/StoragePools/2",
+  "Id": "SP2",
+  "Name": "Enterprise SSD Storage Pool 2",
+  "Description": "High-performance enterprise storage pool for tier-1 workloads, supporting NVMe, Data Protection, and advanced SNIA Swordfish features.",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK"
+  },
+  "Capacity": {
+    "AllocatedBytes": 20971520000000,
+    "ConsumedBytes": 18790481920000,
+    "GuaranteedBytes": 20971520000000,
+    "ProvisionedBytes": 25165824000000,
+    "DataReductionEnabled": true,
+    "DataReductionRatio": 2.3,
+    "DataProtectionLineage": [
+      {
+        "Type": "Replication",
+        "Target": "/redfish/v1/Storage/StoragePools/SP2/ReplicationTargets/Target1"
+      }
+    ]
+  },
+  "StoragePoolType": [
+    "ThinProvisioned",
+    "Deduplicated",
+    "Encrypted"
+  ],
+  "EncryptionTypes": [
+    "AES256-XTS",
+    "FIPS140-2"
+  ],
+  "Redundancy": [
+    {
+      "Mode": "RAID6",
+      "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    }
+  ],
+  "SupportedClassesOfService": [
+    {
+      "@odata.id": "/redfish/v1/Storage/ClassesOfService/Gold"
+    },
+    {
+      "@odata.id": "/redfish/v1/Storage/ClassesOfService/Silver"
+    }
+  ],
+  "IOStatistics": {
+    "ReadIOPS": 250000,
+    "WriteIOPS": 175000,
+    "ReadThroughputMBps": 8000,
+    "WriteThroughputMBps": 6000,
+    "AverageReadLatencyMicroseconds": 120,
+    "AverageWriteLatencyMicroseconds": 150,
+    "IOErrors": 0,
+    "MaxObservedQueueDepth": 64
+  },
+  "AllocatedVolumes": {
+    "@odata.id": "/redfish/v1/Storage/StoragePools/SP2/Volumes"
+  },
+  "AllocatedDrives": [
+    {
+      "@odata.id": "/redfish/v1/Chassis/Enclosure1/Drives/SSD01"
+    },
+    {
+      "@odata.id": "/redfish/v1/Chassis/Enclosure1/Drives/SSD02"
+    },
+    {
+      "@odata.id": "/redfish/v1/Chassis/Enclosure2/Drives/SSD03"
+    }
+  ],
+  "CapacitySources": [
+    {
+      "ProvidedCapacity": {
+        "Data": 20971520000000
+      },
+      "AllocatedPools": [
+        {
+          "@odata.id": "/redfish/v1/Storage/StoragePools/SP2"
+        }
+      ],
+      "StorageResource": {
+        "@odata.id": "/redfish/v1/Chassis/Enclosure1/Drives/SSD01"
+      }
+    }
+  ],
+  "ClientEndpointGroups": [
+    {
+      "@odata.id": "/redfish/v1/Storage/StoragePools/SP2/ClientEndpointGroups/HostGroup1"
+    }
+  ],
+  "Replication": {
+    "SupportedReplicationTypes": [
+      "Asynchronous",
+      "Synchronous"
+    ],
+    "ReplicationTargets": [
+      {
+        "@odata.id": "/redfish/v1/Storage/StoragePools/SP2/ReplicationTargets/Target1"
+      }
+    ]
+  },
+  "DataProtection": {
+    "Snapshot": {
+      "Supported": true,
+      "SnapshotSpaceBytes": 536870912000,
+      "SnapshotCount": 24
+    },
+    "Clone": {
+      "Supported": true
+    }
+  },
+  "Links": {
+    "OwningStorageResource": {
+      "@odata.id": "/redfish/v1/Storage/Controllers/Controller1"
+    },
+    "ResourceBlocks": [
+      {
+        "@odata.id": "/redfish/v1/CompositionService/ResourceBlocks/Block1"
+      }
+    ]
+  },
+  "Oem": {
+    "SNIA": {
+      "DeduplicationRatio": 1.8,
+      "CompressionEnabled": true,
+      "CompressionRatio": 1.3,
+      "StorageTiering": {
+        "Enabled": true,
+        "Policy": "Automatic",
+        "Tiers": [
+          {
+            "TierName": "NVMe-Primary",
+            "Type": "Performance",
+            "CapacityBytes": 10737418240000
+          },
+          {
+            "TierName": "SAS-Secondary",
+            "Type": "Capacity",
+            "CapacityBytes": 10234101760000
+          }
+        ]
+      }
+    }
+  }
+}

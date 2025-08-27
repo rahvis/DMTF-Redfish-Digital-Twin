@@ -1,0 +1,142 @@
+{
+  "@odata.type": "#Volume.v1_19_0.Volume",
+  "@odata.id": "/redfish/v1/Storage/1/Volumes/1",
+  "Id": "1",
+  "Name": "Enterprise NVMe Volume 1",
+  "Description": "High-performance NVMe SSD volume with advanced data protection and encryption",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 4294967296000,
+  "VolumeType": "RawDevice",
+  "Encrypted": true,
+  "EncryptionTypes": [
+    "AES-256-XTS",
+    "FIPS140-2"
+  ],
+  "BlockSizeBytes": 4096,
+  "Identifiers": [
+    {
+      "DurableName": "naa.6001405fb7d9fdc5e1ea000000000001",
+      "DurableNameFormat": "NAA"
+    }
+  ],
+  "OptimumIOSizeBytes": 1048576,
+  "ProvisioningPolicy": {
+    "IsThinProvisioned": true,
+    "IsSpaceEfficient": true
+  },
+  "ReplicaInfo": {
+    "ReplicaEnabled": true,
+    "ReplicaType": "Snapshot",
+    "ReplicaState": "Synchronized"
+  },
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Drives/2"
+      }
+    ],
+    "StoragePools": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/StoragePools/1"
+      }
+    ],
+    "Oem": {
+      "SNIA": {
+        "DataProtection": {
+          "RAIDType": [
+            "RAID5"
+          ],
+          "IsDeduplicationEnabled": true,
+          "IsCompressionEnabled": true,
+          "IsErasureCoded": false,
+          "DataProtectionLineage": [
+            {
+              "Type": "Snapshot",
+              "Target": {
+                "@odata.id": "/redfish/v1/Storage/1/Volumes/1/Snapshots/1"
+              }
+            }
+          ]
+        },
+        "Tiering": {
+          "IsTiered": true,
+          "Tiers": [
+            {
+              "TierName": "Performance",
+              "StorageMedia": "NVMe"
+            },
+            {
+              "TierName": "Capacity",
+              "StorageMedia": "SAS"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Operations": [
+    {
+      "OperationName": "Rebuild",
+      "PercentageComplete": 100,
+      "AssociatedTask": {
+        "@odata.id": "/redfish/v1/TaskService/Tasks/1234"
+      }
+    }
+  ],
+  "Oem": {
+    "SNIA": {
+      "AccessCapabilities": [
+        "Read",
+        "Write",
+        "Unmap",
+        "WriteOnce"
+      ],
+      "IOPerformance": {
+        "IOPS": 1200000,
+        "ThroughputMBps": 6000,
+        "LatencyUsec": 85
+      },
+      "DataSecurityFeatures": [
+        "SecureErase",
+        "InstantSecureErase",
+        "CryptoErase"
+      ],
+      "DataProtection": {
+        "IsReplicationCapable": true,
+        "ReplicationTypesSupported": [
+          "Snapshot",
+          "Clone",
+          "RemoteMirror"
+        ]
+      }
+    }
+  },
+  "Actions": {
+    "#Volume.Initialize": {
+      "target": "/redfish/v1/Storage/1/Volumes/1/Actions/Volume.Initialize",
+      "InitializeType@Redfish.AllowableValues": [
+        "Fast",
+        "Slow",
+        "SecureErase"
+      ]
+    },
+    "#Volume.Snapshot": {
+      "target": "/redfish/v1/Storage/1/Volumes/1/Actions/Volume.Snapshot"
+    },
+    "#Volume.Clone": {
+      "target": "/redfish/v1/Storage/1/Volumes/1/Actions/Volume.Clone"
+    },
+    "Oem": {
+      "SNIA.Swordfish.Migrate": {
+        "target": "/redfish/v1/Storage/1/Volumes/1/Actions/Oem/SNIA.Swordfish.Migrate"
+      }
+    }
+  }
+}

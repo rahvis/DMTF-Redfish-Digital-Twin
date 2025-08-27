@@ -1,0 +1,33 @@
+{
+  "resource_type": "StoragePool",
+  "devices": [
+    {
+      "id": "Pool1",
+      "name": "Enterprise NVMe Storage Pool 1",
+      "odata_id": "/redfish/v1/Storage/1/StoragePools/1",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    },
+    {
+      "id": "SP2",
+      "name": "Enterprise SSD Storage Pool 2",
+      "odata_id": "/redfish/v1/Storage/1/StoragePools/2",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    },
+    {
+      "id": "Pool3",
+      "name": "Enterprise NVMe Storage Pool 3",
+      "odata_id": "/redfish/v1/Storage/1/StoragePools/3",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    }
+  ]
+}

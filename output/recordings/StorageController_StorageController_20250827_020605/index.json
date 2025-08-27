@@ -1,0 +1,35 @@
+{
+  "resource_type": "StorageController",
+  "devices": [
+    {
+      "id": "1",
+      "name": "Enterprise NVMe Storage Controller",
+      "odata_id": "/redfish/v1/Storage/1/Controllers/1",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "1",
+      "name": "Enterprise NVMe Storage Controller",
+      "odata_id": "/redfish/v1/Storage/1/Controllers/2",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "1",
+      "name": "Enterprise NVMe Storage Controller",
+      "odata_id": "/redfish/v1/Storage/1/Controllers/3",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "@odata.type": "#StorageController.v1_17_0.StorageController",
+  "@odata.id": "/redfish/v1/ComputerSystem/9",
+  "Id": "2",
+  "Name": "Enterprise NVMe Storage Controller",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Manufacturer": "Acme Data Systems",
+  "Model": "XDS-9800NVMe",
+  "SerialNumber": "ECS2-24NV-41002",
+  "FirmwareVersion": "5.6.12-20250815",
+  "SupportedControllerProtocols": [
+    "NVMe",
+    "PCIe"
+  ],
+  "SupportedDeviceProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "ControllerRates": {
+    "IOPS": {
+      "Max": 2800000,
+      "Min": 0
+    },
+    "ThroughputMBps": {
+      "Max": 24000,
+      "Min": 0
+    }
+  },
+  "PCIeInterface": {
+    "PCIeType": "Gen5",
+    "Lanes": 16
+  },
+  "Identifiers": [
+    {
+      "DurableName": "5000C500A0A1B2C3",
+      "DurableNameFormat": "NAA"
+    }
+  ],
+  "Links": {
+    "Storage": {
+      "@odata.id": "/redfish/v1/Storage/1"
+    },
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Drives/2"
+      }
+    ],
+    "EthernetInterfaces": [
+      {
+        "@odata.id": "/redfish/v1/Managers/1/EthernetInterfaces/1"
+      }
+    ]
+  },
+  "SupportedRAIDTypes": [
+    "RAID0",
+    "RAID1",
+    "RAID5",
+    "RAID6",
+    "RAID10",
+    "RAID50",
+    "RAID60"
+  ],
+  "AssetTag": "Rack1-Node2-ControllerA",
+  "Location": {
+    "PartLocation": {
+      "ServiceLabel": "Slot2",
+      "LocationType": "Slot",
+      "LocationOrdinalValue": 2
+    }
+  },
+  "Actions": {
+    "#StorageController.Reset": {
+      "target": "/redfish/v1/Storage/1/Controllers/2/Actions/StorageController.Reset",
+      "ResetType@Redfish.AllowableValues": [
+        "GracefulRestart",
+        "ForceRestart"
+      ]
+    },
+    "#StorageController.Oem.AcmeDataSystems.FirmwareUpdate": {
+      "target": "/redfish/v1/Storage/1/Controllers/2/Actions/Oem/AcmeDataSystems.FirmwareUpdate",
+      "Title": "Acme Data Systems Firmware Update"
+    }
+  },
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_3_0.StorageControllerExtension",
+      "DataProtectionCapabilities": {
+        "Encryption": {
+          "SupportedEncryptionTypes": [
+            "AES-256-XTS",
+            "FIPS140-2"
+          ],
+          "CurrentEncryptionType": "AES-256-XTS"
+        },
+        "DataAtRestProtection": true,
+        "DataInTransitProtection": true,
+        "KeyManagement": {
+          "SupportedKeyManagementProtocols": [
+            "KMIP",
+            "Local"
+          ],
+          "CurrentKeyManagementProtocol": "KMIP"
+        }
+      },
+      "AdvancedPerformance": {
+        "NVMeMultipath": true,
+        "SRIOVEnabled": true,
+        "QoS": {
+          "Supported": true,
+          "MaxBandwidthMBps": 24000
+        }
+      },
+      "NVMeoFSupport": {
+        "RDMA": [
+          "RoCEv2",
+          "iWARP"
+        ],
+        "TCP": true,
+        "FibreChannel": false
+      }
+    }
+  }
+}

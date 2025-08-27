@@ -1,0 +1,103 @@
+{
+  "@odata.type": "#Processor.v1_19_0.Processor",
+  "@odata.id": "/redfish/v1/ComputerSystem/4",
+  "@odata.context": "/redfish/v1/$metadata#Processor.Processor",
+  "Id": "2",
+  "Name": "Enterprise Xeon Platinum Processor",
+  "Description": "Intel Xeon Platinum 8590, 64-core, enterprise-grade processor with advanced features for SNIA SDC 2025 demonstration",
+  "ProcessorType": "CPU",
+  "ProcessorArchitecture": "x86",
+  "InstructionSet": "x86-64",
+  "Manufacturer": "Intel",
+  "Model": "Xeon Platinum 8590",
+  "Socket": "CPU2",
+  "TotalCores": 64,
+  "TotalThreads": 128,
+  "MaxSpeedMHz": 3800,
+  "ProcessorId": {
+    "VendorId": "GenuineIntel",
+    "IdentificationRegisters": "0x000906F0",
+    "EffectiveFamily": "6",
+    "EffectiveModel": "143",
+    "Step": "3",
+    "MicrocodeInfo": "0xA0B4"
+  },
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK"
+  },
+  "MaxClockSpeedMHz": 3800,
+  "BaseSpeedMHz": 2800,
+  "TurboSpeedsMHz": [
+    4000,
+    4200
+  ],
+  "TotalCacheSizeMiB": 384,
+  "Cache": [
+    {
+      "Name": "L1 Cache",
+      "Level": "L1",
+      "CacheType": "Data",
+      "SizeMiB": 4
+    },
+    {
+      "Name": "L2 Cache",
+      "Level": "L2",
+      "CacheType": "Unified",
+      "SizeMiB": 64
+    },
+    {
+      "Name": "L3 Cache",
+      "Level": "L3",
+      "CacheType": "Unified",
+      "SizeMiB": 316
+    }
+  ],
+  "TDPWatts": 350,
+  "InstructionSetExtensions": [
+    "AVX-512",
+    "SSE4.2",
+    "AES-NI",
+    "SHA",
+    "TSX-NI"
+  ],
+  "Capabilities": [
+    "HyperThreading",
+    "Virtualization",
+    "HardwareSecurityModule",
+    "TrustedExecution",
+    "SecureBoot",
+    "HardwareRAIDOffload"
+  ],
+  "Metrics": {
+    "@odata.id": "/redfish/v1/Systems/1/Processors/2/Metrics"
+  },
+  "Links": {
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1"
+      }
+    ],
+    "Oem": {
+      "SNIA": {
+        "ManagementNetworkIsolation": true,
+        "DataPathIsolation": true,
+        "SmartNICIntegration": false,
+        "CXLReady": true
+      }
+    }
+  },
+  "Oem": {
+    "SNIA": {
+      "StorageClassMemorySupport": true,
+      "NVMeoFAcceleration": true,
+      "DataAtRestEncryption": true,
+      "DataInTransitEncryption": true,
+      "QoSSupport": {
+        "GuaranteedBandwidth": true,
+        "LatencyOptimization": true
+      },
+      "SwordfishProfile": "EnterpriseDemo2025"
+    }
+  }
+}

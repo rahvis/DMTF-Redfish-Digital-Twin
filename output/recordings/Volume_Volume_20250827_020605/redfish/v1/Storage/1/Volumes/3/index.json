@@ -1,0 +1,113 @@
+{
+  "@odata.type": "#Volume.v1_19_0.Volume",
+  "@odata.id": "/redfish/v1/Storage/1/Volumes/3",
+  "Id": "3",
+  "Name": "Enterprise NVMe Volume 3",
+  "Description": "High-performance NVMe volume for enterprise workloads with advanced data protection and monitoring features.",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 1099511627776,
+  "VolumeType": "RawDevice",
+  "Encrypted": true,
+  "EncryptionTypes": [
+    "AES256-XTS",
+    "SelfEncryptingDrive"
+  ],
+  "BlockSizeBytes": 4096,
+  "Identifiers": [
+    {
+      "DurableNameFormat": "NAA",
+      "DurableName": "naa.6001405ffb6d8e2e42c4b6e4e32a0003"
+    }
+  ],
+  "ReplicaTargets": [
+    {
+      "@odata.id": "/redfish/v1/Storage/1/Volumes/4"
+    }
+  ],
+  "IsThinProvisioned": true,
+  "AccessCapabilities": [
+    "Read",
+    "Write",
+    "Append"
+  ],
+  "OptimumIOSizeBytes": 1048576,
+  "ProvisioningPolicy": "Thick",
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/15"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/16"
+      }
+    ],
+    "Oem": {
+      "SNIA_Swordfish": {
+        "@odata.type": "#SNIA.VolumeLinks",
+        "StorageGroups": [
+          {
+            "@odata.id": "/redfish/v1/Storage/1/StorageGroups/1"
+          }
+        ],
+        "DataProtectionLines": [
+          {
+            "@odata.id": "/redfish/v1/StorageServices/1/DataProtectionLines/1"
+          }
+        ]
+      }
+    }
+  },
+  "Oem": {
+    "SNIA_Swordfish": {
+      "@odata.type": "#SNIA.VolumeExtension",
+      "DataLossProtection": "Protected",
+      "DataAvailability": "High",
+      "PerformanceTier": "Tier0",
+      "IOPSLimit": 100000,
+      "BandwidthLimitMBps": 4000,
+      "DataReductionEnabled": true,
+      "DataReductionType": [
+        "Compression",
+        "Deduplication"
+      ],
+      "SnapshotEnabled": true,
+      "Snapshots": [
+        {
+          "@odata.id": "/redfish/v1/Storage/1/Volumes/3/Snapshots/1"
+        }
+      ],
+      "ReplicationEnabled": true,
+      "ReplicationMode": "Synchronous",
+      "ReplicationRole": "Source"
+    }
+  },
+  "Operations": [
+    {
+      "OperationName": "Initialize",
+      "PercentageComplete": 100,
+      "AssociatedTask": {
+        "@odata.id": "/redfish/v1/TaskService/Tasks/1003"
+      }
+    }
+  ],
+  "Actions": {
+    "#Volume.Initialize": {
+      "target": "/redfish/v1/Storage/1/Volumes/3/Actions/Volume.Initialize",
+      "InitializeType@Redfish.AllowableValues": [
+        "Fast",
+        "Slow",
+        "Overwrite"
+      ]
+    },
+    "#Volume.Snapshot": {
+      "target": "/redfish/v1/Storage/1/Volumes/3/Actions/Volume.Snapshot"
+    },
+    "#Volume.Replicate": {
+      "target": "/redfish/v1/Storage/1/Volumes/3/Actions/Volume.Replicate"
+    }
+  }
+}

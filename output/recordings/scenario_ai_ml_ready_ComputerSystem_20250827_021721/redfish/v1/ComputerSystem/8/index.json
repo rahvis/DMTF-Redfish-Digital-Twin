@@ -1,0 +1,114 @@
+{
+  "@odata.type": "#StorageController.v1_18_0.StorageController",
+  "@odata.id": "/redfish/v1/ComputerSystem/8",
+  "Id": "1",
+  "Name": "Enterprise NVMe RAID Controller",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Manufacturer": "Fictitious Storage Solutions",
+  "Model": "FSX-9800R Gen5",
+  "SerialNumber": "FSX9800R-25SDC-0001",
+  "FirmwareVersion": "6.5.2-20250814",
+  "PartNumber": "FSX-9800R-G5-DC",
+  "AssetTag": "SDC2025-CTRL01",
+  "SupportedControllerProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "SupportedDeviceProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "PCIeInterface": {
+    "Lanes": 16,
+    "MaxLanes": 16,
+    "PCIeType": "Gen5"
+  },
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/2"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/3"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/4"
+      }
+    ],
+    "StorageServices": [
+      {
+        "@odata.id": "/redfish/v1/StorageServices/1"
+      }
+    ],
+    "EthernetInterfaces": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1/NetworkAdapters/1/EthernetInterfaces/1"
+      }
+    ]
+  },
+  "ControllerCapabilities": {
+    "RAIDTypes": [
+      "RAID0",
+      "RAID1",
+      "RAID5",
+      "RAID10",
+      "RAID6",
+      "RAID50",
+      "RAID60"
+    ],
+    "DataProtection": [
+      "Encryption",
+      "SNAPSHOT",
+      "REPLICATION"
+    ],
+    "SupportedLinkProtocols": [
+      "NVMe",
+      "SAS",
+      "iSCSI"
+    ],
+    "MaxDrives": 32,
+    "MaxVolumes": 64,
+    "CacheMemoryMiB": 16384
+  },
+  "Identifiers": [
+    {
+      "DurableName": "5000FSSSDC2025CTRL01",
+      "DurableNameFormat": "NAA"
+    }
+  ],
+  "Actions": {
+    "#StorageController.Reset": {
+      "target": "/redfish/v1/Storage/1/Controllers/1/Actions/StorageController.Reset",
+      "ResetType@Redfish.AllowableValues": [
+        "ForceRestart",
+        "GracefulRestart"
+      ]
+    }
+  },
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_2_0.StorageController",
+      "PersistentMemorySupported": true,
+      "NVMeoFTransportTypes": [
+        "RoCEv2",
+        "TCP",
+        "FC-NVMe"
+      ],
+      "VirtualizationSupport": {
+        "SR-IOV": true,
+        "NVMeNamespacesPerController": 128
+      },
+      "TelemetryEnabled": true,
+      "AdvancedErrorReporting": true
+    }
+  }
+}

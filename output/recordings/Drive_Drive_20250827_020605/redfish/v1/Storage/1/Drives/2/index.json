@@ -1,0 +1,79 @@
+{
+  "@odata.type": "#Drive.v1_19_0.Drive",
+  "@odata.id": "/redfish/v1/Storage/1/Drives/2",
+  "Id": "2",
+  "Name": "Enterprise NVMe SSD Drive 2",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 7680000000000,
+  "Protocol": "NVMe",
+  "MediaType": "SSD",
+  "Manufacturer": "EnterpriseStorage Inc.",
+  "Model": "ES-NVMe-DC7000",
+  "SerialNumber": "ES2025NVME7000SN002",
+  "BlockSizeBytes": 4096,
+  "RotationSpeedRPM": null,
+  "Revision": "FIRMWARE-5.2.1",
+  "Location": [
+    {
+      "Info": "Rear Bay 2",
+      "InfoFormat": "Slot"
+    }
+  ],
+  "Identifiers": [
+    {
+      "DurableNameFormat": "NAA",
+      "DurableName": "5000C500A0A1B2C2"
+    }
+  ],
+  "PartNumber": "NVME7000-7.7TB-2U",
+  "EncryptionAbility": "SelfEncryptingDrive",
+  "EncryptionStatus": "Unlocked",
+  "HotspareType": "None",
+  "PredictedMediaLifeLeftPercent": 98,
+  "StatusIndicator": "OK",
+  "IndicatorLED": "Off",
+  "Operations": [
+    {
+      "OperationName": "FirmwareUpdate",
+      "PercentageComplete": 100
+    }
+  ],
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_6_0.Drive",
+      "DataReductionEnabled": true,
+      "DataReductionType": [
+        "Compression",
+        "Deduplication"
+      ],
+      "NVMeNamespaceCount": 4,
+      "EnduranceBytes": 14000000000000,
+      "SmartData": {
+        "PowerOnHours": 2150,
+        "TemperatureCelsius": 34,
+        "WearLevel": 2
+      }
+    }
+  },
+  "Links": {
+    "Volumes": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Volumes/4"
+      }
+    ],
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/Enclosure1"
+      }
+    ]
+  },
+  "Actions": {
+    "#Drive.SecureErase": {
+      "target": "/redfish/v1/Storage/1/Drives/2/Actions/Drive.SecureErase"
+    }
+  }
+}

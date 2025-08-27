@@ -1,0 +1,38 @@
+{
+  "@odata.type": "#ComputerSystemCollection.ComputerSystemCollection",
+  "@odata.id": "/redfish/v1/ComputerSystem",
+  "Name": "ComputerSystem Collection",
+  "Members@odata.count": 10,
+  "Members": [
+    {
+      "@odata.id": "/redfish/v1/ComputerSystem/1"
+    },
+    {
+      "@odata.id": "/redfish/v1/ComputerSystem/2"
+    },
+    {
+      "@odata.id": "/redfish/v1/ComputerSystem/3"
+    },
+    {
+      "@odata.id": "/redfish/v1/ComputerSystem/4"
+    },
+    {
+      "@odata.id": "/redfish/v1/ComputerSystem/5"
+    },
+    {
+      "@odata.id": "/redfish/v1/ComputerSystem/6"
+    },
+    {
+      "@odata.id": "/redfish/v1/ComputerSystem/7"
+    },
+    {
+      "@odata.id": "/redfish/v1/ComputerSystem/8"
+    },
+    {
+      "@odata.id": "/redfish/v1/ComputerSystem/9"
+    },
+    {
+      "@odata.id": "/redfish/v1/ComputerSystem/10"
+    }
+  ]
+}

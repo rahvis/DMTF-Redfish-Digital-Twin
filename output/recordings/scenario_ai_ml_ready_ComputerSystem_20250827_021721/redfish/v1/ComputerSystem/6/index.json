@@ -1,0 +1,98 @@
+{
+  "@odata.type": "#Memory.v1_19_0.Memory",
+  "@odata.id": "/redfish/v1/ComputerSystem/6",
+  "@odata.context": "/redfish/v1/$metadata#Memory.Memory",
+  "Id": "1",
+  "Name": "Enterprise DDR5 Memory Module",
+  "Description": "Enterprise-grade DDR5 RDIMM memory module for rackmount server",
+  "MemoryType": "DDR5",
+  "MemoryDeviceType": "RDIMM",
+  "BaseModuleType": "RDIMM",
+  "CapacityMiB": 262144,
+  "DataWidthBits": 72,
+  "BusWidthBits": 72,
+  "SpeedMHz": 5600,
+  "Manufacturer": "Micron",
+  "SerialNumber": "MCR32G72AB5-5600-1DC1",
+  "PartNumber": "MTA32ASF4G72PDZ-5E",
+  "FirmwareVersion": "3.1.0",
+  "OperatingSpeedMHz": 5600,
+  "RankCount": 2,
+  "DeviceLocator": "DIMM_A1",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK"
+  },
+  "ErrorCorrection": "Multi-bit ECC",
+  "PersistentMemory": false,
+  "VolatileRegionSizeLimitMiB": 262144,
+  "AllowedSpeedMHz": [
+    4800,
+    5200,
+    5600
+  ],
+  "OperatingMemoryModes": [
+    "Volatile"
+  ],
+  "PowerManagementPolicy": {
+    "PolicyEnabled": true,
+    "MaxPowerWatts": 12
+  },
+  "SecurityCapabilities": {
+    "PassphraseCapable": true,
+    "MaxPassphraseCount": 2,
+    "SecurityStates": [
+      "Unlocked",
+      "Locked"
+    ]
+  },
+  "SNIA_Swordfish": {
+    "TieringSupported": true,
+    "DataPlacementPolicy": "HighPerformance",
+    "PredictiveFailureAnalysis": true,
+    "TelemetryEnabled": true,
+    "TelemetryCollectionIntervalSeconds": 60
+  },
+  "Metrics": {
+    "@odata.id": "/redfish/v1/Systems/1/Memory/1/Metrics"
+  },
+  "Links": {
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1"
+      }
+    ],
+    "Assembly": {
+      "@odata.id": "/redfish/v1/Systems/1/Memory/1/Assembly"
+    }
+  },
+  "RegionSet": [
+    {
+      "RegionId": "VolatileRegion1",
+      "MemoryClassification": "Volatile",
+      "OffsetMiB": 0,
+      "SizeMiB": 262144
+    }
+  ],
+  "RedfishProfileCompliance": [
+    "public-rackmount1"
+  ],
+  "Actions": {
+    "#Memory.ResetPassphrase": {
+      "target": "/redfish/v1/Systems/1/Memory/1/Actions/Memory.ResetPassphrase"
+    }
+  },
+  "Oem": {
+    "SNIA": {
+      "TelemetryProfile": "public-telemetry",
+      "AdvancedSecurity": true,
+      "MemoryAnalytics": {
+        "PredictiveFailure": true,
+        "UsageStatistics": {
+          "AverageUtilizationPercent": 68,
+          "PeakUtilizationPercent": 95
+        }
+      }
+    }
+  }
+}

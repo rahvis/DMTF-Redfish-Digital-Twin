@@ -1,0 +1,184 @@
+{
+  "@odata.type": "#ComputerSystem.v1_25_0.ComputerSystem",
+  "Id": "EFS2025R1",
+  "Name": "EnterpriseFabricSystem01",
+  "SystemType": "Physical",
+  "AssetTag": "DC-SEA-2-RK12-01",
+  "Manufacturer": "AcmeStorage",
+  "Model": "ESX-9200",
+  "SubModel": "RackPro-XL",
+  "SKU": "ESX9200-XL-256G",
+  "SerialNumber": "EFS2025R1SN0001",
+  "PartNumber": "ACM-9200-XL-01",
+  "Description": "AcmeStorage ESX-9200 Enterprise Rackmount Compute and Storage Node",
+  "UUID": "b1f0b7e2-2db0-48c2-9cf1-70ddc1e2e9c0",
+  "HostName": "efs01.acmestorage.corp",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "HostingRoles": [
+    "StorageServer",
+    "VirtualizationHost",
+    "FabricController"
+  ],
+  "IndicatorLED": "Off",
+  "PowerState": "On",
+  "Boot": {
+    "BootSourceOverrideEnabled": "Continuous",
+    "BootSourceOverrideTarget": "Hdd",
+    "BootSourceOverrideTarget@Redfish.AllowableValues": [
+      "None",
+      "Pxe",
+      "Cd",
+      "Usb",
+      "Hdd",
+      "BiosSetup",
+      "Utilities",
+      "Diags",
+      "SDCard",
+      "UefiTarget"
+    ],
+    "BootSourceOverrideMode": "UEFI",
+    "UefiTargetBootSourceOverride": "/0x31/0x33/0x01/0x02"
+  },
+  "TrustedModules": [
+    {
+      "FirmwareVersion": "2.34.5",
+      "InterfaceType": "TPM2_0",
+      "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    }
+  ],
+  "Oem": {
+    "AcmeStorage": {
+      "@odata.type": "#AcmeStorage.ComputerSystem",
+      "ProductionLocation": {
+        "FacilityName": "Puget Sound Fab 3",
+        "Country": "USA"
+      },
+      "RackPlacement": {
+        "Rack": "12",
+        "Row": "2",
+        "Datacenter": "SEA-2"
+      }
+    },
+    "SNIA": {
+      "@odata.type": "#SNIA.Swordfish.ComputerSystem",
+      "StorageServices": [
+        {
+          "@odata.id": "/redfish/v1/StorageServices/ESX9200-Primary"
+        }
+      ],
+      "StorageCapacityBytes": 2214592512000,
+      "DataProtectionCapabilities": [
+        "Replication",
+        "Snapshot",
+        "EncryptionAtRest"
+      ],
+      "SupportedProtocols": [
+        "NVMe-oF",
+        "iSCSI",
+        "FC"
+      ]
+    }
+  },
+  "BootProgress": {
+    "LastState": "OSRunning",
+    "LastStateTime": "2025-08-27T01:59:41Z",
+    "LastBootTimeSeconds": 403
+  },
+  "LastResetTime": "2025-08-27T01:52:58Z",
+  "BiosVersion": "AS9200-R1.18 (2025/07/10)",
+  "ProcessorSummary": {
+    "Count": 2,
+    "Model": "Intel(R) Xeon(R) Platinum 8490H",
+    "LogicalProcessorCount": 128,
+    "CoreCount": 64,
+    "Status": {
+      "State": "Enabled",
+      "Health": "OK",
+      "HealthRollup": "OK"
+    }
+  },
+  "MemorySummary": {
+    "TotalSystemMemoryGiB": 2048,
+    "TotalSystemPersistentMemoryGiB": 512,
+    "MemoryMirroring": "Full",
+    "Status": {
+      "State": "Enabled",
+      "Health": "OK",
+      "HealthRollup": "OK"
+    }
+  },
+  "Bios": {
+    "@odata.id": "/redfish/v1/Systems/EFS2025R1/Bios"
+  },
+  "SecureBoot": {
+    "@odata.id": "/redfish/v1/Systems/EFS2025R1/SecureBoot"
+  },
+  "Processors": {
+    "@odata.id": "/redfish/v1/Systems/EFS2025R1/Processors"
+  },
+  "Memory": {
+    "@odata.id": "/redfish/v1/Systems/EFS2025R1/Memory"
+  },
+  "EthernetInterfaces": {
+    "@odata.id": "/redfish/v1/Systems/EFS2025R1/EthernetInterfaces"
+  },
+  "SimpleStorage": {
+    "@odata.id": "/redfish/v1/Systems/EFS2025R1/SimpleStorage"
+  },
+  "LogServices": {
+    "@odata.id": "/redfish/v1/Systems/EFS2025R1/LogServices"
+  },
+  "GraphicsControllers": {
+    "@odata.id": "/redfish/v1/Systems/EFS2025R1/GraphicsControllers"
+  },
+  "USBControllers": {
+    "@odata.id": "/redfish/v1/Systems/EFS2025R1/USBControllers"
+  },
+  "Certificates": {
+    "@odata.id": "/redfish/v1/Systems/EFS2025R1/Certificates"
+  },
+  "VirtualMedia": {
+    "@odata.id": "/redfish/v1/Systems/EFS2025R1/VirtualMedia"
+  },
+  "Links": {
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/Rack12U01"
+      }
+    ],
+    "ManagedBy": [
+      {
+        "@odata.id": "/redfish/v1/Managers/BMC01"
+      }
+    ]
+  },
+  "Actions": {
+    "#ComputerSystem.Reset": {
+      "target": "/redfish/v1/Systems/EFS2025R1/Actions/ComputerSystem.Reset",
+      "ResetType@Redfish.AllowableValues": [
+        "On",
+        "ForceOff",
+        "GracefulShutdown",
+        "GracefulRestart",
+        "ForceRestart",
+        "Nmi",
+        "ForceOn",
+        "PushPowerButton"
+      ]
+    },
+    "Oem": {
+      "#AcmeStorage.Reset": {
+        "target": "/redfish/v1/Systems/EFS2025R1/Oem/AcmeStorage/Actions/AcmeStorage.Reset"
+      }
+    }
+  },
+  "@odata.id": "/redfish/v1/ComputerSystem/2",
+  "@Redfish.Copyright": "Copyright 2014-2025 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+}

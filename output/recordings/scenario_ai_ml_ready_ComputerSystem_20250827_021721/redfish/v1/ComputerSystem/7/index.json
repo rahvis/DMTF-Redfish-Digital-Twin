@@ -1,0 +1,114 @@
+{
+  "@odata.type": "#Memory.v1_19_0.Memory",
+  "@odata.id": "/redfish/v1/ComputerSystem/7",
+  "@odata.context": "/redfish/v1/$metadata#Memory.Memory",
+  "Id": "2",
+  "Name": "Enterprise DDR5 Registered DIMM",
+  "Description": "Enterprise-grade DDR5 Registered DIMM Module suitable for high-performance compute workloads",
+  "MemoryType": "DDR5",
+  "BaseModuleType": "RDIMM",
+  "MemoryDeviceType": "DRAM",
+  "CapacityMiB": 262144,
+  "DataWidthBits": 72,
+  "BusWidthBits": 80,
+  "RankCount": 2,
+  "SpeedMHz": 5600,
+  "Manufacturer": "EnterpriseMemoryCorp",
+  "SerialNumber": "EMC23DDR5500162A2",
+  "PartNumber": "EMC-DDR5-256GB-RD-5600",
+  "FirmwareRevision": "1.0.4",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK"
+  },
+  "OperatingMemoryModes": [
+    "Volatile"
+  ],
+  "AllowedSpeedsMHz": [
+    5600,
+    5200,
+    4800
+  ],
+  "ConfiguredVoltageVolt": 1.1,
+  "MinimumVoltageVolt": 1.0,
+  "MaximumVoltageVolt": 1.2,
+  "ModuleManufacturerID": 4098,
+  "ModuleProductID": 22136,
+  "DeviceLocator": "DIMM_A1",
+  "MemoryLocation": {
+    "Socket": 1,
+    "MemoryController": 0,
+    "Channel": 0,
+    "Slot": 1
+  },
+  "ErrorCorrection": "Multi-bit ECC",
+  "OperatingSpeedMhz": 5600,
+  "IsHotPluggable": true,
+  "IsRankSpareEnabled": true,
+  "Regions": [
+    {
+      "RegionId": "Primary",
+      "MemoryClassification": "Volatile",
+      "OffsetMiB": 0,
+      "SizeMiB": 262144,
+      "PassphraseState": false
+    }
+  ],
+  "Metrics": {
+    "@odata.id": "/redfish/v1/Systems/1/Memory/2/MemoryMetrics"
+  },
+  "Links": {
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1"
+      }
+    ],
+    "Oem": {
+      "SNIA": {
+        "Swordfish": {
+          "StorageClassMemory": false,
+          "PersistentRegionPresent": false,
+          "LogicalMemoryGroups": [
+            {
+              "GroupName": "HighPerformanceCompute",
+              "GroupCapacityMiB": 262144
+            }
+          ],
+          "InterleaveSets": [
+            {
+              "SetId": "IS-1",
+              "SetType": "ChannelInterleave",
+              "MemberCount": 2
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Oem": {
+    "SNIA": {
+      "Swordfish": {
+        "IsMemoryTiered": true,
+        "MemoryTier": "DRAM",
+        "PerformanceTier": "High",
+        "SupportedProtocols": [
+          "DDR5"
+        ],
+        "SecurityCapabilities": {
+          "Encryption": true,
+          "EncryptionTypes": [
+            "AES-XTS-256"
+          ],
+          "PassphraseCapable": true,
+          "SecureEraseSupported": true
+        },
+        "AdvancedHealthMetrics": {
+          "TemperatureCelsius": 38,
+          "CorrectableECCErrors": 0,
+          "UncorrectableECCErrors": 0,
+          "WearLevelPercentage": 99
+        }
+      }
+    }
+  }
+}

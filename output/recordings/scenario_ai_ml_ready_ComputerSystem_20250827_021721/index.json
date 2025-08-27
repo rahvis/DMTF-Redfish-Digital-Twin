@@ -1,0 +1,101 @@
+{
+  "resource_type": "ComputerSystem",
+  "devices": [
+    {
+      "id": "SDC2025RACK01",
+      "name": "SDC2025 Rackmount Compute Node 1",
+      "odata_id": "/redfish/v1/ComputerSystem/1",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "EFS2025R1",
+      "name": "EnterpriseFabricSystem01",
+      "odata_id": "/redfish/v1/ComputerSystem/2",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "1",
+      "name": "Enterprise Xeon Platinum Processor",
+      "odata_id": "/redfish/v1/ComputerSystem/3",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Enterprise Xeon Platinum Processor",
+      "odata_id": "/redfish/v1/ComputerSystem/4",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Enterprise Xeon Platinum 8562+ Processor",
+      "odata_id": "/redfish/v1/ComputerSystem/5",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "1",
+      "name": "Enterprise DDR5 Memory Module",
+      "odata_id": "/redfish/v1/ComputerSystem/6",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Enterprise DDR5 Registered DIMM",
+      "odata_id": "/redfish/v1/ComputerSystem/7",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    },
+    {
+      "id": "1",
+      "name": "Enterprise NVMe RAID Controller",
+      "odata_id": "/redfish/v1/ComputerSystem/8",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Enterprise NVMe Storage Controller",
+      "odata_id": "/redfish/v1/ComputerSystem/9",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Enterprise NVMe Storage Controller",
+      "odata_id": "/redfish/v1/ComputerSystem/10",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    }
+  ]
+}

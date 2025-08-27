@@ -1,0 +1,66 @@
+{
+  "@odata.type": "#Drive.v1_19_0.Drive",
+  "@odata.id": "/redfish/v1/Storage/1/Drives/1",
+  "Id": "1",
+  "Name": "Enterprise NVMe SSD 1",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 7680397189120,
+  "Protocol": "NVMe",
+  "MediaType": "SSD",
+  "Manufacturer": "Micron",
+  "Model": "9300 PRO 7.68TB U.2 NVMe",
+  "SerialNumber": "MCR9300P7T68-0001",
+  "BlockSizeBytes": 4096,
+  "RotationSpeedRPM": 0,
+  "FirmwareVersion": "3.2.0",
+  "PartNumber": "MTFDHAL7T6TDP-1AT1ZABYY",
+  "EncryptionAbility": "SelfEncryptingDrive",
+  "EncryptionStatus": "Enabled",
+  "HotspareType": "None",
+  "FailurePredicted": false,
+  "Links": {
+    "Volumes": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Volumes/1"
+      }
+    ],
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1"
+      }
+    ]
+  },
+  "Identifiers": [
+    {
+      "DurableNameFormat": "NAA",
+      "DurableName": "naa.500a0751e8d2e0a1"
+    }
+  ],
+  "StatusIndicator": "OK",
+  "IndicatorLED": "Off",
+  "NegotiatedSpeedGbs": 32,
+  "PredictedMediaLifeLeftPercent": 98,
+  "PowerState": "On",
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_2_0.DriveExtension",
+      "DriveClass": "Enterprise",
+      "WearLevel": {
+        "Unit": "Percent",
+        "Value": 2
+      },
+      "DataUnitsWritten": 12003490000000,
+      "DataUnitsRead": 14500980000000,
+      "SmartMetrics": {
+        "TemperatureCelsius": 35,
+        "AvailableSparePercent": 100,
+        "MediaErrors": 0,
+        "CriticalWarnings": []
+      }
+    }
+  }
+}

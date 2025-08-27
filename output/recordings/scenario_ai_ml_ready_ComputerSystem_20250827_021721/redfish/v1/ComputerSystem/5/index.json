@@ -1,0 +1,94 @@
+{
+  "@odata.type": "#Processor.v1_19_0.Processor",
+  "@odata.id": "/redfish/v1/ComputerSystem/5",
+  "@odata.context": "/redfish/v1/$metadata#Processor.Processor",
+  "Id": "3",
+  "Name": "Enterprise Xeon Platinum 8562+ Processor",
+  "Description": "High-performance, multi-core enterprise-grade processor with security and virtualization features.",
+  "ProcessorType": "CPU",
+  "ProcessorArchitecture": "x86",
+  "InstructionSet": "x86-64",
+  "Manufacturer": "Intel",
+  "Model": "Xeon Platinum 8562+",
+  "Socket": "CPU3",
+  "TotalCores": 32,
+  "TotalThreads": 64,
+  "MaxSpeedMHz": 3900,
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "ProcessorId": {
+    "VendorId": "GenuineIntel",
+    "IdentificationRegisters": "0xF00F82",
+    "EffectiveFamily": "0x06",
+    "EffectiveModel": "0x8F",
+    "Step": "0x02",
+    "MicrocodeInfo": "0xFFFFFFFF"
+  },
+  "Capabilities": [
+    "64-bit Capable",
+    "Hyper-Threading",
+    "AVX-512",
+    "Secure Boot",
+    "Intel\u00ae SGX",
+    "Hardware Virtualization",
+    "AES-NI",
+    "Trusted Execution Technology"
+  ],
+  "MaxClockSpeedMHz": 3900,
+  "BaseSpeedMHz": 2700,
+  "TDPWatts": 250,
+  "ProcessorMemory": {
+    "MemoryType": "DDR5",
+    "MemorySpeedMHz": 5600,
+    "ECCEnabled": true,
+    "TotalMemoryMB": 1048576
+  },
+  "TrustedExecutionTechnology": true,
+  "FPGA": {
+    "ProgrammableFromHost": false,
+    "Type": null
+  },
+  "OEM": {
+    "SNIA_Swordfish": {
+      "@odata.type": "#SNIA.Swordfish.ProcessorExtension.v1_2_0.ProcessorExtension",
+      "DataProtection": {
+        "HardwareEncryptionSupported": true,
+        "EncryptionAlgorithms": [
+          "AES-256-XTS",
+          "SM4-CBC"
+        ]
+      },
+      "QoS": {
+        "GuaranteedPerformance": true,
+        "MaxIOPS": 1200000,
+        "MaxBandwidthMBps": 45000
+      },
+      "TelemetryEnabled": true,
+      "Reliability": {
+        "RASFeatures": [
+          "MachineCheckRecovery",
+          "MemoryMirroring",
+          "PredictiveFailureAnalysis"
+        ]
+      }
+    }
+  },
+  "Links": {
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1"
+      }
+    ],
+    "Systems": [
+      {
+        "@odata.id": "/redfish/v1/Systems/1"
+      }
+    ]
+  },
+  "Metrics": {
+    "@odata.id": "/redfish/v1/Systems/1/Processors/3/Metrics"
+  }
+}

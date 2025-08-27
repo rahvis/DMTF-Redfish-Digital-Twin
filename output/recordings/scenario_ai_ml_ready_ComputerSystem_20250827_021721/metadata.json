@@ -1,0 +1,15 @@
+{
+  "recording_info": {
+    "timestamp": "2025-08-27T02:17:21.851729",
+    "device_type": "scenario_ai_ml_ready",
+    "resource_type": "ComputerSystem",
+    "device_count": 10,
+    "generator_version": "1.0.0",
+    "schema_version": "2023.2"
+  },
+  "statistics": {
+    "total_devices": 10,
+    "healthy_devices": 10,
+    "enabled_devices": 10
+  }
+}

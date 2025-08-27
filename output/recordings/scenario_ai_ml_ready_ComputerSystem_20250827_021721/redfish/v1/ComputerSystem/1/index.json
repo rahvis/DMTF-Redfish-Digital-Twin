@@ -1,0 +1,180 @@
+{
+  "@odata.type": "#ComputerSystem.v1_25_0.ComputerSystem",
+  "Id": "SDC2025RACK01",
+  "Name": "SDC2025 Rackmount Compute Node 1",
+  "SystemType": "Physical",
+  "AssetTag": "SDC2025-DC1-RACK01-NODE01",
+  "Manufacturer": "Acme Enterprise Systems",
+  "Model": "X9800R Pro",
+  "SubModel": "Gen5",
+  "SKU": "X98R-25-8C-512G-4X25GE",
+  "SerialNumber": "SDC2025RACK01SN001",
+  "PartNumber": "X9800R-G5-4X25GE",
+  "Description": "Enterprise-grade rackmount compute node with advanced storage and security features, optimized for SNIA SDC 2025 demonstration.",
+  "UUID": "78a2d3b6-1c45-4e6a-9e5a-3c2afefb1461",
+  "HostName": "sdc2025-node01",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "HostingRoles": [
+    "VirtualizationServer",
+    "StorageController",
+    "AnalyticsNode"
+  ],
+  "IndicatorLED": "Off",
+  "PowerState": "On",
+  "Boot": {
+    "BootSourceOverrideEnabled": "Continuous",
+    "BootSourceOverrideTarget": "Hdd",
+    "BootSourceOverrideTarget@Redfish.AllowableValues": [
+      "None",
+      "Pxe",
+      "Cd",
+      "Usb",
+      "Hdd",
+      "BiosSetup",
+      "Utilities",
+      "Diags",
+      "SDCard",
+      "UefiTarget"
+    ],
+    "BootSourceOverrideMode": "UEFI",
+    "UefiTargetBootSourceOverride": "/0x31/0x33/0x01/0x01"
+  },
+  "TrustedModules": [
+    {
+      "FirmwareVersion": "2.6.0",
+      "InterfaceType": "TPM2_0",
+      "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    }
+  ],
+  "Oem": {
+    "Acme": {
+      "@odata.type": "#Acme.ComputerSystem",
+      "ProductionLocation": {
+        "FacilityName": "Acme Datacenter Manufacturing",
+        "Country": "USA"
+      },
+      "FirmwareBundleVersion": "2025.2-Enterprise"
+    },
+    "Swordfish": {
+      "@odata.type": "#Swordfish.ComputerSystem",
+      "StorageDomain": "ProdCluster01",
+      "DataProtectionCapabilities": [
+        "Replication",
+        "Snapshot",
+        "EncryptionAtRest"
+      ],
+      "StoragePerformanceTier": "NVMe-Gen5"
+    }
+  },
+  "BootProgress": {
+    "LastState": "OSRunning",
+    "LastStateTime": "2025-08-27T02:10:52Z",
+    "LastBootTimeSeconds": 388
+  },
+  "LastResetTime": "2025-08-27T01:59:24Z",
+  "BiosVersion": "X9800R G5 v3.14 (2025-07-29)",
+  "ProcessorSummary": {
+    "Count": 2,
+    "Model": "Intel(R) Xeon(R) Gold 8558P",
+    "LogicalProcessorCount": 128,
+    "CoreCount": 64,
+    "Status": {
+      "State": "Enabled",
+      "Health": "OK",
+      "HealthRollup": "OK"
+    }
+  },
+  "MemorySummary": {
+    "TotalSystemMemoryGiB": 1024,
+    "TotalSystemPersistentMemoryGiB": 512,
+    "MemoryMirroring": "System",
+    "Status": {
+      "State": "Enabled",
+      "Health": "OK",
+      "HealthRollup": "OK"
+    }
+  },
+  "Bios": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/Bios"
+  },
+  "SecureBoot": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/SecureBoot"
+  },
+  "Processors": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/Processors"
+  },
+  "Memory": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/Memory"
+  },
+  "EthernetInterfaces": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/EthernetInterfaces"
+  },
+  "NetworkInterfaces": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/NetworkInterfaces"
+  },
+  "SimpleStorage": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/SimpleStorage"
+  },
+  "Storage": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/Storage"
+  },
+  "LogServices": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/LogServices"
+  },
+  "GraphicsControllers": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/GraphicsControllers"
+  },
+  "USBControllers": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/USBControllers"
+  },
+  "Certificates": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/Certificates"
+  },
+  "VirtualMedia": {
+    "@odata.id": "/redfish/v1/Systems/SDC2025RACK01/VirtualMedia"
+  },
+  "Links": {
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/Rack01U01"
+      }
+    ],
+    "ManagedBy": [
+      {
+        "@odata.id": "/redfish/v1/Managers/DC1-BMC01"
+      }
+    ]
+  },
+  "Actions": {
+    "#ComputerSystem.Reset": {
+      "target": "/redfish/v1/Systems/SDC2025RACK01/Actions/ComputerSystem.Reset",
+      "ResetType@Redfish.AllowableValues": [
+        "On",
+        "ForceOff",
+        "GracefulShutdown",
+        "GracefulRestart",
+        "ForceRestart",
+        "Nmi",
+        "ForceOn",
+        "PushPowerButton"
+      ]
+    },
+    "#ComputerSystem.SetDefaultBootOrder": {
+      "target": "/redfish/v1/Systems/SDC2025RACK01/Actions/ComputerSystem.SetDefaultBootOrder"
+    },
+    "Oem": {
+      "#Acme.Reset": {
+        "target": "/redfish/v1/Systems/SDC2025RACK01/Oem/Acme/Actions/Acme.Reset"
+      }
+    }
+  },
+  "@odata.id": "/redfish/v1/ComputerSystem/1",
+  "@Redfish.Copyright": "Copyright 2014-2025 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+}

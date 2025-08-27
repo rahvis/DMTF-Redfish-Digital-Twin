@@ -1,0 +1,100 @@
+{
+  "@odata.type": "#Processor.v1_19_0.Processor",
+  "@odata.id": "/redfish/v1/ComputerSystem/3",
+  "@odata.context": "/redfish/v1/$metadata#Processor.Processor",
+  "Id": "1",
+  "Name": "Enterprise Xeon Platinum Processor",
+  "Description": "Intel Xeon Platinum 8490H 4th Gen Scalable Processor for enterprise-grade rackmount server",
+  "Socket": "CPU1",
+  "ProcessorType": "CPU",
+  "ProcessorArchitecture": "x86",
+  "InstructionSet": "x86-64",
+  "Manufacturer": "Intel",
+  "Model": "Xeon Platinum 8490H",
+  "ProcessorId": {
+    "VendorId": "GenuineIntel",
+    "IdentificationRegisters": "0xBFEBFBFF000406F1",
+    "EffectiveFamily": "6",
+    "EffectiveModel": "143",
+    "Step": "5",
+    "MicrocodeInfo": "0x2F"
+  },
+  "MaxSpeedMHz": 3700,
+  "TotalCores": 60,
+  "TotalThreads": 120,
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK"
+  },
+  "ProcessorMemory": {
+    "CapacityMiB": 4096,
+    "Type": "L3 Cache"
+  },
+  "InstructionSetExtensions": [
+    "AVX-512",
+    "SSE4.2",
+    "AES-NI",
+    "FMA3"
+  ],
+  "Capabilities": [
+    "HyperThreading",
+    "Virtualization",
+    "TrustedExecution",
+    "TurboBoost",
+    "HardwareSecurity",
+    "RAS",
+    "PCIeGen5",
+    "CXL"
+  ],
+  "FPGA": null,
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIAProcessor.v1_0_0.SNIAProcessor",
+      "StorageClassMemorySupport": true,
+      "DataEncryptionCapabilities": [
+        "AES-256-XTS",
+        "SM4"
+      ],
+      "PersistentMemoryInterleaveSupport": true,
+      "NVMeOFOffloadEngines": [
+        {
+          "Type": "TCP",
+          "Enabled": true,
+          "MaxQueues": 16
+        }
+      ],
+      "TelemetrySupport": [
+        "RealTimeTelemetry",
+        "ThermalMetrics",
+        "PowerMetrics"
+      ],
+      "SR-IOVSupport": true
+    }
+  },
+  "Links": {
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1"
+      }
+    ],
+    "Oem": {}
+  },
+  "Location": {
+    "PartLocation": {
+      "ServiceLabel": "CPU1",
+      "LocationType": "Slot",
+      "LocationOrdinalValue": 1
+    }
+  },
+  "Metrics": {
+    "@odata.id": "/redfish/v1/Systems/1/Processors/1/Metrics"
+  },
+  "SKU": "CM8071504825001",
+  "TDPWatts": 350,
+  "MaxSocketSpeedMHz": 4100,
+  "CoreEnabled": 60,
+  "ThreadEnabled": 120,
+  "IntegratedMemoryControllers": 8,
+  "MaxMemorySpeedMHz": 4800,
+  "PowerState": "On"
+}

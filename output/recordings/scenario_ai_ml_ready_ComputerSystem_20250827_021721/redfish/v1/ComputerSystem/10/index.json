@@ -1,0 +1,116 @@
+{
+  "@odata.type": "#StorageController.v1_13_0.StorageController",
+  "@odata.id": "/redfish/v1/ComputerSystem/10",
+  "Id": "3",
+  "Name": "Enterprise NVMe Storage Controller",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Manufacturer": "EnterpriseStorage Inc.",
+  "Model": "ExStorX9000-NVMeoF",
+  "SerialNumber": "ESX9K-3SNX20250827A",
+  "FirmwareVersion": "9.2.15-2025R2",
+  "SupportedControllerProtocols": [
+    "NVMe",
+    "NVMeOverFabrics",
+    "SAS",
+    "PCIe"
+  ],
+  "SupportedDeviceProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "PCIeInterface": {
+    "Lanes": 16,
+    "MaxLanes": 16,
+    "PCIeType": "Gen5"
+  },
+  "Identifiers": [
+    {
+      "DurableName": "5001B6200003F1D3",
+      "DurableNameFormat": "NAA"
+    }
+  ],
+  "PartNumber": "X9K-9000-PRO",
+  "AssetTag": "DC1-RK01-U03-C03",
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/2"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/3"
+      }
+    ],
+    "Volumes": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Volumes/1"
+      }
+    ],
+    "PCIeDevices": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1/PCIeDevices/1"
+      }
+    ]
+  },
+  "SupportedRAIDTypes": [
+    "RAID0",
+    "RAID1",
+    "RAID5",
+    "RAID6",
+    "RAID10",
+    "RAID50"
+  ],
+  "ControllerRates": {
+    "DataRateGbps": 128,
+    "IOPS": 7500000,
+    "ThroughputMBps": 160000
+  },
+  "Redundancy": [
+    {
+      "@odata.id": "/redfish/v1/Storage/1/Controllers/3/Redundancy/1"
+    }
+  ],
+  "Actions": {
+    "#StorageController.Reset": {
+      "target": "/redfish/v1/Storage/1/Controllers/3/Actions/StorageController.Reset",
+      "ResetType@Redfish.AllowableValues": [
+        "GracefulRestart",
+        "ForceRestart"
+      ]
+    }
+  },
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_2_0.StorageControllerExtension",
+      "AdvancedDataServices": [
+        "Replication",
+        "Snapshot",
+        "ThinProvisioning",
+        "DataReduction"
+      ],
+      "FabricConnectivity": [
+        "Ethernet100Gb",
+        "FC32Gb"
+      ],
+      "EnduranceClass": "Enterprise",
+      "ControllerCache": {
+        "CacheMemoryGiB": 64,
+        "CacheType": "DRAM+NVRAM"
+      },
+      "NVMeoF": {
+        "SupportedTransports": [
+          "RoCEv2",
+          "FC-NVMe",
+          "TCP"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "resource_type": "Drive",
+  "devices": [
+    {
+      "id": "1",
+      "name": "Enterprise NVMe SSD 1",
+      "odata_id": "/redfish/v1/Storage/1/Drives/1",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Enterprise NVMe SSD Drive 2",
+      "odata_id": "/redfish/v1/Storage/1/Drives/2",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Enterprise NVMe SSD 3.84TB",
+      "odata_id": "/redfish/v1/Storage/1/Drives/3",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    }
+  ]
+}

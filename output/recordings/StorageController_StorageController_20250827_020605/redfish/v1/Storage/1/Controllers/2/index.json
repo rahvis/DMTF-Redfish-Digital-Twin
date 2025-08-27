@@ -1,0 +1,133 @@
+{
+  "@odata.type": "#StorageController.v1_18_0.StorageController",
+  "@odata.id": "/redfish/v1/Storage/1/Controllers/2",
+  "Id": "1",
+  "Name": "Enterprise NVMe Storage Controller",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Manufacturer": "EnterpriseStorage Inc.",
+  "Model": "XG-9000NVMe-HA",
+  "SerialNumber": "ESI25XG9000NVH0012",
+  "PartNumber": "XG9000NVMEHA-CTRL",
+  "FirmwareVersion": "9.12.3.4-20250821",
+  "AssetTag": "SDC2025-CTRL-01",
+  "SupportedControllerProtocols": [
+    "PCIe",
+    "NVMe",
+    "SAS",
+    "iSCSI"
+  ],
+  "SupportedDeviceProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "ControllerRates": {
+    "MaxIOPS": 7200000,
+    "MaxThroughputMBps": 34000
+  },
+  "Location": [
+    {
+      "Info": "Rack 04, Drawer 2, Bay 3",
+      "InfoFormat": "Freeform"
+    }
+  ],
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/2/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/2/Drives/2"
+      }
+    ],
+    "StorageServices": [
+      {
+        "@odata.id": "/redfish/v1/StorageServices/1"
+      }
+    ],
+    "NetworkPorts": [
+      {
+        "@odata.id": "/redfish/v1/NetworkPorts/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/NetworkPorts/2"
+      }
+    ],
+    "PCIeDevices": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1/PCIeDevices/1"
+      }
+    ]
+  },
+  "PCIeInterface": {
+    "PCIeType": "Gen5",
+    "LaneCount": 16
+  },
+  "SupportedRAIDTypes": [
+    "RAID0",
+    "RAID1",
+    "RAID5",
+    "RAID6",
+    "RAID10",
+    "RAID50",
+    "RAID60"
+  ],
+  "ControllerCapabilities": {
+    "DataAtRestEncryptionCapable": true,
+    "DataAtRestEncryption": "Enabled",
+    "SupportedEncryptionTypes": [
+      "AES-256-XTS",
+      "FIPS140-2"
+    ],
+    "NVMeOFInitiatorCapable": true,
+    "NVMeOFResponderCapable": true,
+    "DualControllerCapable": true,
+    "FailoverSupported": true,
+    "HighAvailabilityMode": "ActiveActive"
+  },
+  "Redundancy": [
+    {
+      "@odata.id": "/redfish/v1/Storage/2/Controllers/1/Redundancy/1"
+    }
+  ],
+  "Identifiers": [
+    {
+      "DurableName": "5000C500A0B1C2D3",
+      "DurableNameFormat": "NAA"
+    }
+  ],
+  "@Redfish.Swordfish": {
+    "IOPerformancePolicy": "HighThroughput",
+    "StorageTieringPolicy": "Auto",
+    "AdvancedDataReduction": {
+      "CompressionEnabled": true,
+      "DeduplicationEnabled": true
+    },
+    "ProactiveHealthMonitoring": {
+      "PredictiveFailureAnalysis": true,
+      "TelemetryEnabled": true
+    }
+  },
+  "Actions": {
+    "#StorageController.Reset": {
+      "target": "/redfish/v1/Storage/2/Controllers/1/Actions/StorageController.Reset",
+      "ResetType@Redfish.AllowableValues": [
+        "GracefulRestart",
+        "ForceRestart"
+      ]
+    },
+    "#StorageController.SetEncryptionKey": {
+      "target": "/redfish/v1/Storage/2/Controllers/1/Actions/StorageController.SetEncryptionKey"
+    }
+  },
+  "Oem": {
+    "EnterpriseStorageInc": {
+      "ControllerClusterId": "CL-02-HA",
+      "FirmwareBundle": "ESI_NVMe_Cluster_FW_20250821"
+    }
+  }
+}

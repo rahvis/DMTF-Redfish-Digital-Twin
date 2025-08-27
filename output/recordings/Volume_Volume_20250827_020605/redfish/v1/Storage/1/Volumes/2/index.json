@@ -1,0 +1,94 @@
+{
+  "@odata.type": "#Volume.v1_19_0.Volume",
+  "@odata.id": "/redfish/v1/Storage/1/Volumes/2",
+  "Id": "2",
+  "Name": "EnterpriseDataVolume02",
+  "Description": "Enterprise-grade NVMe Volume optimized for high-performance workloads, featuring full SNIA Swordfish extensions.",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 4294967296000,
+  "VolumeType": "NonRedundant",
+  "Encrypted": true,
+  "EncryptionTypes": [
+    "AES256-XTS",
+    "FIPS140-2"
+  ],
+  "BlockSizeBytes": 4096,
+  "Identifiers": [
+    {
+      "DurableName": "naa.600140529184b7d5c3b4e2e500000202",
+      "DurableNameFormat": "NAA"
+    }
+  ],
+  "ReplicaInfo": {
+    "ReplicaType": "Snapshot",
+    "ReplicaRole": "Source",
+    "ReplicaTargets": [
+      {
+        "@odata.id": "/redfish/v1/Storage/Volumes/2/Snapshots/PrimaryBackup"
+      }
+    ]
+  },
+  "AccessCapabilities": [
+    "Read",
+    "Write",
+    "Snapshot",
+    "Clone"
+  ],
+  "ProvisioningPolicy": {
+    "ProvisioningType": "Thin",
+    "IsSpaceEfficient": true
+  },
+  "Links": {
+    "Oem": {
+      "SNIA_Swordfish": {
+        "@odata.type": "#SNIA.VolumeLinks",
+        "StorageGroups": [
+          {
+            "@odata.id": "/redfish/v1/Storage/StorageGroups/EnterpriseGroupA"
+          }
+        ],
+        "AllocatedPools": [
+          {
+            "@odata.id": "/redfish/v1/Storage/Pools/1"
+          }
+        ],
+        "ReplicationTargets": [
+          {
+            "@odata.id": "/redfish/v1/Storage/Volumes/3"
+          }
+        ]
+      }
+    }
+  },
+  "Operations": [
+    {
+      "OperationName": "Rebuild",
+      "PercentageComplete": 100,
+      "AssociatedTask": {
+        "@odata.id": "/redfish/v1/TaskService/Tasks/12"
+      }
+    }
+  ],
+  "Oem": {
+    "SNIA_Swordfish": {
+      "DataProtectionLineOfService": {
+        "IsReadOnly": false,
+        "IsDataProtectionEnabled": true,
+        "ProtectionTypes": [
+          "Snapshot",
+          "Replication"
+        ],
+        "RecoveryTimeObjectiveMinutes": 5
+      },
+      "PerformanceMetrics": {
+        "ThroughputMBps": 7500,
+        "IOPS": 1800000,
+        "LatencyUsec": 120
+      }
+    }
+  }
+}
