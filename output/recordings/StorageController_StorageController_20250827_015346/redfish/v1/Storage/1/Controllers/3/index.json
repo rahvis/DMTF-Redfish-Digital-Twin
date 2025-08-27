@@ -1,0 +1,134 @@
+{
+  "@odata.type": "#StorageController.v1_17_0.StorageController",
+  "@odata.id": "/redfish/v1/Storage/1/Controllers/3",
+  "Id": "1",
+  "Name": "Enterprise NVMe RAID Controller",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Manufacturer": "Contoso Storage Solutions",
+  "Model": "CSX-9800NVMe",
+  "SerialNumber": "CSX9800NVME-A1B2C3D4E5F6",
+  "FirmwareVersion": "9.2.17-5243",
+  "PartNumber": "CSX-9800NVME-RAID",
+  "SKU": "9800NVME-R-128GB",
+  "AssetTag": "SDC25-CTRL-33",
+  "SupportedControllerProtocols": [
+    "PCIe",
+    "NVMe",
+    "SAS"
+  ],
+  "SupportedDeviceProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "ControllerRatesGbps": [
+    128,
+    64
+  ],
+  "PCIeInterface": {
+    "PCIeType": "PCIe4.0",
+    "Lanes": 16,
+    "MaxLanes": 16,
+    "CurrentLinkSpeedGbps": 64
+  },
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/3/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/3/Drives/2"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/3/Drives/3"
+      }
+    ],
+    "StorageServices": [
+      {
+        "@odata.id": "/redfish/v1/StorageServices/3"
+      }
+    ],
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1"
+      }
+    ],
+    "ManagedBy": [
+      {
+        "@odata.id": "/redfish/v1/Managers/1"
+      }
+    ]
+  },
+  "SupportedRAIDTypes": [
+    "RAID0",
+    "RAID1",
+    "RAID5",
+    "RAID6",
+    "RAID10",
+    "RAID50",
+    "RAID60"
+  ],
+  "NVMeoF": {
+    "Supported": true,
+    "Fabrics": [
+      "RoCEv2",
+      "TCP"
+    ]
+  },
+  "CacheSummary": {
+    "PersistentCacheSizeMiB": 65536,
+    "VolatileCacheSizeMiB": 131072,
+    "CacheType": [
+      "DRAM",
+      "NVDIMM-N"
+    ]
+  },
+  "ControllerCapabilities": {
+    "DataProtection": [
+      "Encryption",
+      "DataAtRestEncryption",
+      "EndToEndDataProtection",
+      "T10DIF"
+    ],
+    "SupportedEncryptionTypes": [
+      "AES-256-XTS",
+      "FIPS140-2"
+    ],
+    "DriveBypassSupported": true,
+    "ControllerResetSupported": true,
+    "FailoverSupported": true,
+    "MultipathSupported": true
+  },
+  "Oem": {
+    "SNIA": {
+      "StorageController": {
+        "AdvancedCachePolicy": [
+          "ReadAhead",
+          "WriteBack",
+          "WriteThrough",
+          "Adaptive"
+        ],
+        "CompressionSupported": true,
+        "DeduplicationSupported": true,
+        "MaxVolumesSupported": 256,
+        "SynchronousReplicationSupported": true,
+        "AsynchronousReplicationSupported": true,
+        "QualityOfService": {
+          "MinIOPS": 50000,
+          "MaxIOPS": 200000,
+          "MinBandwidthMBps": 2000,
+          "MaxBandwidthMBps": 8000
+        },
+        "FabricServices": [
+          "Discovery",
+          "NamespaceManagement",
+          "HostNQNManagement"
+        ]
+      }
+    }
+  }
+}

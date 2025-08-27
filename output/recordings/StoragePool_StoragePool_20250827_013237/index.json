@@ -1,0 +1,23 @@
+{
+  "resource_type": "StoragePool",
+  "devices": [
+    {
+      "id": "SP1",
+      "name": "Enterprise NVMe Storage Pool",
+      "odata_id": "/redfish/v1/Storage/1/StoragePools/1",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    },
+    {
+      "id": "2",
+      "name": "EnterpriseTier1StoragePool",
+      "odata_id": "/redfish/v1/Storage/1/StoragePools/2",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    }
+  ]
+}

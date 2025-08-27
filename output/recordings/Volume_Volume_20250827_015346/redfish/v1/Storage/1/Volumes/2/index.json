@@ -1,0 +1,100 @@
+{
+  "@odata.type": "#Volume.v1_19_0.Volume",
+  "@odata.id": "/redfish/v1/Storage/1/Volumes/2",
+  "Id": "2",
+  "Name": "EnterpriseTier1-Volume02",
+  "Description": "Enterprise-grade NVMe SSD volume for tier-1 workloads, with advanced features and SNIA Swordfish extensions.",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 2147483648000,
+  "VolumeType": "RawDevice",
+  "Encrypted": true,
+  "EncryptionTypes": [
+    "AES-256-XTS",
+    "FIPS140-2"
+  ],
+  "BlockSizeBytes": 4096,
+  "Identifiers": [
+    {
+      "DurableName": "naa.6001405a8dbe8e9d0c1b2c3d4e5f6789",
+      "DurableNameFormat": "NAA"
+    },
+    {
+      "DurableName": "eui.00112233445566778899aabbccddeeff",
+      "DurableNameFormat": "EUI"
+    }
+  ],
+  "AccessCapabilities": [
+    "Read",
+    "Write",
+    "Append"
+  ],
+  "ReplicaInfo": {
+    "ReplicaType": "Snapshot",
+    "ReplicaRole": "Source",
+    "ReplicaState": "Synchronized"
+  },
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/3"
+      }
+    ],
+    "StoragePools": [
+      {
+        "@odata.id": "/redfish/v1/StoragePools/1"
+      }
+    ],
+    "Oem": {
+      "SNIA.Swordfish": {
+        "StorageTier": "Performance",
+        "DataProtectionLineOfService": [
+          {
+            "DataProtectionType": [
+              "Replication",
+              "Snapshot"
+            ],
+            "ReplicaCount": 2,
+            "IsIsolated": true
+          }
+        ],
+        "StorageCapacitySource": [
+          {
+            "ConsumedBytes": 2147483648000,
+            "AllocatedBytes": 2199023255552,
+            "StoragePool": {
+              "@odata.id": "/redfish/v1/StoragePools/1"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "Operations": [
+    {
+      "OperationName": "Rebuild",
+      "PercentageComplete": 100,
+      "AssociatedTask": {
+        "@odata.id": "/redfish/v1/TaskService/Tasks/45"
+      }
+    }
+  ],
+  "Oem": {
+    "SNIA.Swordfish": {
+      "ProvisioningPolicy": "Thin",
+      "TieringPolicy": "Auto",
+      "PerformanceMetrics": {
+        "IOPS": 125000,
+        "ThroughputMBps": 4000,
+        "LatencyUsec": 120
+      },
+      "DataSecurityFeatures": [
+        "InstantSecureErase",
+        "AuditLogging"
+      ]
+    }
+  }
+}

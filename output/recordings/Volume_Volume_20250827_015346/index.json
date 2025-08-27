@@ -1,0 +1,35 @@
+{
+  "resource_type": "Volume",
+  "devices": [
+    {
+      "id": "1",
+      "name": "Enterprise-Volume-01",
+      "odata_id": "/redfish/v1/Storage/1/Volumes/1",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "2",
+      "name": "EnterpriseTier1-Volume02",
+      "odata_id": "/redfish/v1/Storage/1/Volumes/2",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Enterprise NVMe Volume 3",
+      "odata_id": "/redfish/v1/Storage/1/Volumes/3",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    }
+  ]
+}

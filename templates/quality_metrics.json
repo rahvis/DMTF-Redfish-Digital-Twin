@@ -1,0 +1,356 @@
+{
+  "compliance_scoring": {
+    "redfish_compliance": {
+      "weight": 40,
+      "criteria": {
+        "required_fields": {
+          "weight": 15,
+          "description": "All required Redfish properties are present",
+          "scoring": {
+            "100": "All required fields present",
+            "80": "90-99% of required fields present",
+            "60": "80-89% of required fields present",
+            "40": "70-79% of required fields present",
+            "20": "60-69% of required fields present",
+            "0": "Less than 60% of required fields present"
+          }
+        },
+        "data_types": {
+          "weight": 10,
+          "description": "All fields use correct data types",
+          "scoring": {
+            "100": "All data types correct",
+            "80": "90-99% of data types correct",
+            "60": "80-89% of data types correct",
+            "40": "70-79% of data types correct",
+            "20": "60-69% of data types correct",
+            "0": "Less than 60% of data types correct"
+          }
+        },
+        "value_constraints": {
+          "weight": 10,
+          "description": "All values meet Redfish constraints",
+          "scoring": {
+            "100": "All values meet constraints",
+            "80": "90-99% of values meet constraints",
+            "60": "80-89% of values meet constraints",
+            "40": "70-79% of values meet constraints",
+            "20": "60-69% of values meet constraints",
+            "0": "Less than 60% of values meet constraints"
+          }
+        },
+        "odata_patterns": {
+          "weight": 5,
+          "description": "Proper @odata.type and @odata.id patterns",
+          "scoring": {
+            "100": "Perfect @odata patterns",
+            "80": "Minor @odata pattern issues",
+            "60": "Some @odata pattern issues",
+            "40": "Multiple @odata pattern issues",
+            "20": "Significant @odata pattern issues",
+            "0": "Invalid @odata patterns"
+          }
+        }
+      }
+    },
+    "swordfish_compliance": {
+      "weight": 20,
+      "criteria": {
+        "storage_extensions": {
+          "weight": 10,
+          "description": "SNIA Swordfish storage extensions",
+          "scoring": {
+            "100": "Full Swordfish compliance",
+            "80": "Most Swordfish features present",
+            "60": "Some Swordfish features present",
+            "40": "Limited Swordfish features",
+            "20": "Basic Swordfish support",
+            "0": "No Swordfish features"
+          }
+        },
+        "storage_protocols": {
+          "weight": 10,
+          "description": "Storage protocol support and optimization",
+          "scoring": {
+            "100": "Advanced storage protocols",
+            "80": "Modern storage protocols",
+            "60": "Standard storage protocols",
+            "40": "Basic storage protocols",
+            "20": "Limited protocol support",
+            "0": "No protocol support"
+          }
+        }
+      }
+    },
+    "enterprise_quality": {
+      "weight": 25,
+      "criteria": {
+        "realistic_values": {
+          "weight": 10,
+          "description": "Realistic enterprise infrastructure values",
+          "scoring": {
+            "100": "Perfectly realistic values",
+            "80": "Very realistic values",
+            "60": "Mostly realistic values",
+            "40": "Somewhat realistic values",
+            "20": "Limited realism",
+            "0": "Unrealistic values"
+          }
+        },
+        "advanced_features": {
+          "weight": 10,
+          "description": "Advanced enterprise features and capabilities",
+          "scoring": {
+            "100": "Cutting-edge features",
+            "80": "Advanced features",
+            "60": "Modern features",
+            "40": "Standard features",
+            "20": "Basic features",
+            "0": "Minimal features"
+          }
+        },
+        "business_logic": {
+          "weight": 5,
+          "description": "Business logic and cross-field validation",
+          "scoring": {
+            "100": "Perfect business logic",
+            "80": "Excellent business logic",
+            "60": "Good business logic",
+            "40": "Basic business logic",
+            "20": "Limited business logic",
+            "0": "No business logic"
+          }
+        }
+      }
+    },
+    "presentation_quality": {
+      "weight": 15,
+      "criteria": {
+        "completeness": {
+          "weight": 8,
+          "description": "Complete and comprehensive device representation",
+          "scoring": {
+            "100": "Fully comprehensive",
+            "80": "Very comprehensive",
+            "60": "Mostly comprehensive",
+            "40": "Somewhat comprehensive",
+            "20": "Limited completeness",
+            "0": "Incomplete"
+          }
+        },
+        "professional_appearance": {
+          "weight": 7,
+          "description": "Professional appearance suitable for presentation",
+          "scoring": {
+            "100": "Perfect presentation quality",
+            "80": "Excellent presentation quality",
+            "60": "Good presentation quality",
+            "40": "Acceptable presentation quality",
+            "20": "Limited presentation quality",
+            "0": "Poor presentation quality"
+          }
+        }
+      }
+    }
+  },
+  "quality_indicators": {
+    "excellent": {
+      "range": "90-100",
+      "description": "Perfect compliance and enterprise quality",
+      "color": "green",
+      "icon": "✓",
+      "presentation_ready": true,
+      "audience_impact": "High"
+    },
+    "very_good": {
+      "range": "80-89",
+      "description": "Excellent compliance with minor issues",
+      "color": "bright_green",
+      "icon": "✓",
+      "presentation_ready": true,
+      "audience_impact": "High"
+    },
+    "good": {
+      "range": "70-79",
+      "description": "Good compliance with some areas for improvement",
+      "color": "yellow",
+      "icon": "⚠",
+      "presentation_ready": true,
+      "audience_impact": "Medium"
+    },
+    "acceptable": {
+      "range": "60-69",
+      "description": "Acceptable compliance but needs improvement",
+      "color": "orange",
+      "icon": "⚠",
+      "presentation_ready": false,
+      "audience_impact": "Medium"
+    },
+    "needs_improvement": {
+      "range": "50-59",
+      "description": "Significant compliance issues",
+      "color": "red",
+      "icon": "✗",
+      "presentation_ready": false,
+      "audience_impact": "Low"
+    },
+    "poor": {
+      "range": "0-49",
+      "description": "Major compliance and quality issues",
+      "color": "bright_red",
+      "icon": "✗",
+      "presentation_ready": false,
+      "audience_impact": "Low"
+    }
+  },
+  "validation_categories": {
+    "critical": {
+      "description": "Critical validation failures that prevent presentation",
+      "examples": [
+        "Missing required Redfish properties",
+        "Invalid @odata patterns",
+        "Completely unrealistic values",
+        "Major schema violations"
+      ],
+      "action": "Must fix before presentation"
+    },
+    "high": {
+      "description": "High-priority issues that affect presentation quality",
+      "examples": [
+        "Data type mismatches",
+        "Value constraint violations",
+        "Missing enterprise features",
+        "Business logic errors"
+      ],
+      "action": "Should fix for optimal presentation"
+    },
+    "medium": {
+      "description": "Medium-priority issues that can be addressed",
+      "examples": [
+        "Minor value inconsistencies",
+        "Limited feature coverage",
+        "Basic business logic gaps",
+        "Presentation quality issues"
+      ],
+      "action": "Can address if time permits"
+    },
+    "low": {
+      "description": "Low-priority issues with minimal impact",
+      "examples": [
+        "Minor formatting issues",
+        "Optional feature gaps",
+        "Cosmetic improvements",
+        "Documentation enhancements"
+      ],
+      "action": "Optional improvements"
+    }
+  },
+  "presentation_metrics": {
+    "audience_engagement": {
+      "live_demo_quality": {
+        "weight": 30,
+        "description": "Quality of live demonstration",
+        "factors": [
+          "Real-time generation speed",
+          "Visual appeal of output",
+          "Interactive elements",
+          "Professional appearance"
+        ]
+      },
+      "technical_depth": {
+        "weight": 25,
+        "description": "Technical depth and accuracy",
+        "factors": [
+          "Standards compliance",
+          "Enterprise realism",
+          "Feature completeness",
+          "Validation accuracy"
+        ]
+      },
+      "innovation_showcase": {
+        "weight": 25,
+        "description": "Innovation and cutting-edge features",
+        "factors": [
+          "AI capabilities",
+          "Advanced technologies",
+          "Future possibilities",
+          "Industry impact"
+        ]
+      },
+      "professional_presentation": {
+        "weight": 20,
+        "description": "Professional presentation quality",
+        "factors": [
+          "Clear communication",
+          "Structured delivery",
+          "Audience interaction",
+          "Time management"
+        ]
+      }
+    },
+    "demo_scenario_metrics": {
+      "enterprise_storage": {
+        "target_score": 90,
+        "key_features": [
+          "RAID technologies",
+          "NVMe protocols",
+          "Enterprise management",
+          "SNIA Swordfish"
+        ]
+      },
+      "high_performance_compute": {
+        "target_score": 88,
+        "key_features": [
+          "Modern processors",
+          "High-speed memory",
+          "Network optimization",
+          "Enterprise reliability"
+        ]
+      },
+      "modular_infrastructure": {
+        "target_score": 85,
+        "key_features": [
+          "Modular design",
+          "Fabric technologies",
+          "Centralized management",
+          "Physical security"
+        ]
+      },
+      "edge_computing": {
+        "target_score": 82,
+        "key_features": [
+          "Edge optimization",
+          "Environmental resilience",
+          "Local processing",
+          "IoT integration"
+        ]
+      }
+    }
+  },
+  "improvement_recommendations": {
+    "compliance_improvements": [
+      "Add missing required Redfish properties",
+      "Correct data type mismatches",
+      "Validate value constraints",
+      "Fix @odata pattern issues"
+    ],
+    "quality_enhancements": [
+      "Include more enterprise features",
+      "Add advanced capabilities",
+      "Improve business logic",
+      "Enhance realistic values"
+    ],
+    "presentation_optimizations": [
+      "Increase feature completeness",
+      "Improve professional appearance",
+      "Add demonstration elements",
+      "Enhance visual appeal"
+    ],
+    "audience_impact": [
+      "Highlight innovative features",
+      "Showcase enterprise capabilities",
+      "Demonstrate standards compliance",
+      "Illustrate business value"
+    ]
+  }
+}

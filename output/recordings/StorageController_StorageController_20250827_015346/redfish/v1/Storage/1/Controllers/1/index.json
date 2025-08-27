@@ -1,0 +1,91 @@
+{
+  "@odata.type": "#StorageController.v1_12_0.StorageController",
+  "@odata.id": "/redfish/v1/Storage/1/Controllers/1",
+  "Id": "1",
+  "Name": "Enterprise NVMe Storage Controller",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Manufacturer": "SNIA Reference Systems",
+  "Model": "XDSC-9200NVMe",
+  "SerialNumber": "SC25NVMESDC1001",
+  "FirmwareVersion": "9.2.3-ER-2025",
+  "SupportedControllerProtocols": [
+    "NVMe",
+    "PCIe"
+  ],
+  "SupportedDeviceProtocols": [
+    "NVMe",
+    "SATA",
+    "SAS"
+  ],
+  "Identifiers": [
+    {
+      "DurableName": "5000C500A0B1C2D3",
+      "DurableNameFormat": "NAA"
+    }
+  ],
+  "PCIeInterface": {
+    "PCIeType": "Gen4",
+    "Lanes": 16
+  },
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/2"
+      }
+    ],
+    "StorageServices": [
+      {
+        "@odata.id": "/redfish/v1/StorageServices/1"
+      }
+    ],
+    "Enclosures": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/Enclosure1"
+      }
+    ]
+  },
+  "SupportedRAIDTypes": [
+    "RAID0",
+    "RAID1",
+    "RAID5",
+    "RAID6",
+    "RAID10"
+  ],
+  "ControllerRatesGbps": {
+    "MaxDataRateGbps": 128,
+    "CurrentDataRateGbps": 128
+  },
+  "CacheMemoryMiB": 8192,
+  "NVMeoF": {
+    "Enabled": true,
+    "TransportTypes": [
+      "RDMA",
+      "TCP"
+    ]
+  },
+  "Oem": {
+    "SNIA": {
+      "SDC2025Demo": {
+        "SwordfishProfile": "v2025.2",
+        "DataProtectionCapabilities": [
+          "Snapshot",
+          "Clone",
+          "Replication",
+          "EncryptionAtRest"
+        ],
+        "Endurance": {
+          "WearLevel": "Low",
+          "EstimatedLifeRemainingPercent": 98
+        },
+        "TelemetryEnabled": true
+      }
+    }
+  }
+}

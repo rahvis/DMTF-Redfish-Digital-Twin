@@ -1,0 +1,15 @@
+{
+  "recording_info": {
+    "timestamp": "2025-08-27T01:32:37.611750",
+    "device_type": "Volume",
+    "resource_type": "Volume",
+    "device_count": 2,
+    "generator_version": "1.0.0",
+    "schema_version": "2023.2"
+  },
+  "statistics": {
+    "total_devices": 2,
+    "healthy_devices": 2,
+    "enabled_devices": 2
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "StorageController": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "required": [
+      "@odata.type",
+      "@odata.id",
+      "Id",
+      "Name",
+      "Status"
+    ],
+    "properties": {
+      "@odata.type": {
+        "type": "string",
+        "pattern": "^#StorageController\\.v[0-9]+_[0-9]+_[0-9]+\\.StorageController$"
+      },
+      "@odata.id": {
+        "type": "string",
+        "format": "uri-reference"
+      },
+      "Id": {
+        "type": "string"
+      },
+      "Name": {
+        "type": "string"
+      },
+      "Status": {
+        "type": "object",
+        "properties": {
+          "State": {
+            "type": "string",
+            "enum": [
+              "Enabled",
+              "Disabled",
+              "StandbyOffline",
+              "StandbySpare",
+              "InTest",
+              "Starting",
+              "Absent"
+            ]
+          },
+          "Health": {
+            "type": "string",
+            "enum": [
+              "OK",
+              "Warning",
+              "Critical"
+            ]
+          }
+        }
+      },
+      "Manufacturer": {
+        "type": "string"
+      },
+      "Model": {
+        "type": "string"
+      },
+      "SerialNumber": {
+        "type": "string"
+      },
+      "FirmwareVersion": {
+        "type": "string"
+      }
+    }
+  },
+  "Drive": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "required": [
+      "@odata.type",
+      "@odata.id",
+      "Id",
+      "Name",
+      "Status",
+      "CapacityBytes",
+      "Protocol"
+    ],
+    "properties": {
+      "@odata.type": {
+        "type": "string",
+        "pattern": "^#Drive\\.v[0-9]+_[0-9]+_[0-9]+\\.Drive$"
+      },
+      "@odata.id": {
+        "type": "string",
+        "format": "uri-reference"
+      },
+      "Id": {
+        "type": "string"
+      },
+      "Name": {
+        "type": "string"
+      },
+      "Status": {
+        "type": "object",
+        "properties": {
+          "State": {
+            "type": "string",
+            "enum": [
+              "Enabled",
+              "Disabled",
+              "StandbyOffline",
+              "StandbySpare",
+              "InTest",
+              "Starting",
+              "Absent"
+            ]
+          },
+          "Health": {
+            "type": "string",
+            "enum": [
+              "OK",
+              "Warning",
+              "Critical"
+            ]
+          }
+        }
+      },
+      "CapacityBytes": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "Protocol": {
+        "type": "string",
+        "enum": [
+          "PCIe",
+          "SAS",
+          "SATA",
+          "NVMe",
+          "USB",
+          "FC"
+        ]
+      },
+      "MediaType": {
+        "type": "string",
+        "enum": [
+          "HDD",
+          "SSD",
+          "SMR"
+        ]
+      },
+      "Manufacturer": {
+        "type": "string"
+      },
+      "Model": {
+        "type": "string"
+      },
+      "SerialNumber": {
+        "type": "string"
+      },
+      "BlockSizeBytes": {
+        "type": "integer",
+        "enum": [
+          512,
+          4096
+        ]
+      },
+      "RotationSpeedRPM": {
+        "type": "integer"
+      }
+    }
+  },
+  "Volume": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "required": [
+      "@odata.type",
+      "@odata.id",
+      "Id",
+      "Name",
+      "Status",
+      "CapacityBytes"
+    ],
+    "properties": {
+      "@odata.type": {
+        "type": "string",
+        "pattern": "^#Volume\\.v[0-9]+_[0-9]+_[0-9]+\\.Volume$"
+      },
+      "@odata.id": {
+        "type": "string",
+        "format": "uri-reference"
+      },
+      "Id": {
+        "type": "string"
+      },
+      "Name": {
+        "type": "string"
+      },
+      "Status": {
+        "type": "object",
+        "properties": {
+          "State": {
+            "type": "string",
+            "enum": [
+              "Enabled",
+              "Disabled",
+              "StandbyOffline",
+              "StandbySpare",
+              "InTest",
+              "Starting",
+              "Absent"
+            ]
+          },
+          "Health": {
+            "type": "string",
+            "enum": [
+              "OK",
+              "Warning",
+              "Critical"
+            ]
+          }
+        }
+      },
+      "CapacityBytes": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "VolumeType": {
+        "type": "string",
+        "enum": [
+          "RawDevice",
+          "NonRedundant",
+          "Mirrored",
+          "StripedWithParity",
+          "SpannedMirrors",
+          "SpannedStripesWithParity"
+        ]
+      },
+      "Encrypted": {
+        "type": "boolean"
+      },
+      "BlockSizeBytes": {
+        "type": "integer"
+      }
+    }
+  },
+  "Chassis": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "required": [
+      "@odata.type",
+      "@odata.id",
+      "Id",
+      "Name",
+      "ChassisType",
+      "Status"
+    ],
+    "properties": {
+      "@odata.type": {
+        "type": "string",
+        "pattern": "^#Chassis\\.v[0-9]+_[0-9]+_[0-9]+\\.Chassis$"
+      },
+      "@odata.id": {
+        "type": "string",
+        "format": "uri-reference"
+      },
+      "Id": {
+        "type": "string"
+      },
+      "Name": {
+        "type": "string"
+      },
+      "ChassisType": {
+        "type": "string",
+        "enum": [
+          "RackMount",
+          "Enclosure",
+          "Blade",
+          "Drawer",
+          "StandAlone",
+          "Card",
+          "Sled",
+          "Rack",
+          "Row",
+          "Pod",
+          "Shelf",
+          "Module"
+        ]
+      },
+      "Status": {
+        "type": "object",
+        "properties": {
+          "State": {
+            "type": "string",
+            "enum": [
+              "Enabled",
+              "Disabled",
+              "StandbyOffline",
+              "StandbySpare",
+              "InTest",
+              "Starting",
+              "Absent"
+            ]
+          },
+          "Health": {
+            "type": "string",
+            "enum": [
+              "OK",
+              "Warning",
+              "Critical"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "StoragePool": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "required": [
+      "@odata.type",
+      "@odata.id",
+      "Id",
+      "Name"
+    ],
+    "properties": {
+      "@odata.type": {
+        "type": "string",
+        "pattern": "^#StoragePool\\.v[0-9]+_[0-9]+_[0-9]+\\.StoragePool$"
+      },
+      "@odata.id": {
+        "type": "string",
+        "format": "uri-reference"
+      },
+      "Id": {
+        "type": "string"
+      },
+      "Name": {
+        "type": "string"
+      },
+      "Capacity": {
+        "type": "object",
+        "properties": {
+          "Data": {
+            "type": "object",
+            "properties": {
+              "AllocatedBytes": {
+                "type": "integer"
+              },
+              "ConsumedBytes": {
+                "type": "integer"
+              },
+              "GuaranteedBytes": {
+                "type": "integer"
+              },
+              "ProvisionedBytes": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "IOStatistics": {
+        "type": "object",
+        "properties": {
+          "ReadHitIORequests": {
+            "type": "integer"
+          },
+          "ReadIOKiBytes": {
+            "type": "integer"
+          },
+          "WriteHitIORequests": {
+            "type": "integer"
+          },
+          "WriteIOKiBytes": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

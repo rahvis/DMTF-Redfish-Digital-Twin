@@ -1,0 +1,20 @@
+{
+  "@odata.type": "#StoragePool.v1_5_0.StoragePool",
+  "@odata.id": "/redfish/v1/StoragePools/PoolA",
+  "Id": "PoolA",
+  "Name": "NVMe Tier A",
+  "Capacity": {
+    "Data": {
+      "AllocatedBytes": 10000000000000,
+      "ConsumedBytes": 7500000000000,
+      "GuaranteedBytes": 9000000000000,
+      "ProvisionedBytes": 12000000000000
+    }
+  },
+  "IOStatistics": {
+    "ReadHitIORequests": 102003,
+    "ReadIOKiBytes": 8844221,
+    "WriteHitIORequests": 53299,
+    "WriteIOKiBytes": 4922201
+  }
+}

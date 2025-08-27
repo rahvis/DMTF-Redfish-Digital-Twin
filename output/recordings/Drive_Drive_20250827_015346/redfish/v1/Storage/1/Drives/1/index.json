@@ -1,0 +1,80 @@
+{
+  "@odata.type": "#Drive.v1_19_0.Drive",
+  "@odata.id": "/redfish/v1/Storage/1/Drives/1",
+  "Id": "1",
+  "Name": "Enterprise NVMe SSD 1",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 7680000000000,
+  "Protocol": "NVMe",
+  "MediaType": "SSD",
+  "Manufacturer": "SNIA-RefStorage",
+  "Model": "NVMe-Gen5-Enterprise-X",
+  "SerialNumber": "SDC2025NVME001",
+  "BlockSizeBytes": 4096,
+  "RotationSpeedRPM": null,
+  "Identifiers": [
+    {
+      "DurableName": "5000C500AABBCCDD",
+      "DurableNameFormat": "NAA"
+    }
+  ],
+  "EncryptionAbility": "SelfEncryptingDrive",
+  "EncryptionStatus": "Unlocked",
+  "HotspareType": "None",
+  "PredictedMediaLifeLeftPercent": 98,
+  "ProtocolFeaturesSupported": [
+    "NVMeNamespaceManagement",
+    "NVMeMultipath",
+    "NVMeEnduranceGroups"
+  ],
+  "OperatingEnvironment": {
+    "TemperatureCelsius": 38,
+    "PowerWatts": 13
+  },
+  "FRUInfo": {
+    "PartNumber": "NV5EX-SDC-7.68TB",
+    "SerialNumber": "SDC2025NVME001",
+    "Manufacturer": "SNIA-RefStorage",
+    "Model": "NVMe-Gen5-Enterprise-X"
+  },
+  "Location": [
+    {
+      "Info": "Slot 1",
+      "InfoFormat": "SlotNumber"
+    }
+  ],
+  "OEM": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_5_0.Drive",
+      "DriveType": "Enterprise",
+      "SmartData": {
+        "PowerOnHours": 87,
+        "DataUnitsWritten": 32000000,
+        "DataUnitsRead": 12500000,
+        "WearLevelingCount": 2,
+        "TemperatureCelsius": 38
+      },
+      "NamespaceCount": 4,
+      "EnduranceGroupInfo": {
+        "TotalWriteCycles": 30000,
+        "RemainingWriteCycles": 29400
+      }
+    }
+  },
+  "Links": {
+    "Volumes": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Volumes/1"
+      }
+    ],
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1"
+      }
+    ]
+  }
+}

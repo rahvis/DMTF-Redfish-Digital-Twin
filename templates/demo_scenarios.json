@@ -1,0 +1,362 @@
+{
+  "enterprise_storage": {
+    "name": "Enterprise Storage Infrastructure",
+    "description": "High-performance, scalable, enterprise-grade storage infrastructure with advanced features",
+    "focus_areas": [
+      "RAID technologies and data protection",
+      "NVMe and high-speed protocols",
+      "Storage virtualization and pooling",
+      "Enterprise management and monitoring",
+      "SNIA Swordfish extensions"
+    ],
+    "devices": {
+      "StorageController": {
+        "count": 4,
+        "features": [
+          "Advanced RAID support",
+          "NVMe over Fabrics",
+          "Encryption capabilities",
+          "Hot spare management",
+          "Predictive maintenance"
+        ]
+      },
+      "Drive": {
+        "count": 24,
+        "features": [
+          "Mixed media types (SSD/HDD)",
+          "High-capacity options",
+          "Enterprise reliability",
+          "Performance optimization",
+          "Hot spare configuration"
+        ]
+      },
+      "Volume": {
+        "count": 16,
+        "features": [
+          "Multiple RAID levels",
+          "Thin provisioning",
+          "Data deduplication",
+          "Snapshot capabilities",
+          "Replication support"
+        ]
+      },
+      "StoragePool": {
+        "count": 3,
+        "features": [
+          "Tiered storage",
+          "Capacity planning",
+          "Performance optimization",
+          "Automated management",
+          "Scalability features"
+        ]
+      }
+    },
+    "presentation_highlights": [
+      "Enterprise-grade reliability and performance",
+      "Advanced data protection and redundancy",
+      "Scalable architecture for growth",
+      "Professional management capabilities",
+      "SNIA Swordfish compliance"
+    ]
+  },
+  "high_performance_compute": {
+    "name": "High-Performance Computing Infrastructure",
+    "description": "Modern compute infrastructure optimized for performance, scalability, and enterprise workloads",
+    "focus_areas": [
+      "Multi-core processor architectures",
+      "High-speed memory technologies",
+      "Network performance optimization",
+      "Virtualization and composability",
+      "Power and thermal management"
+    ],
+    "devices": {
+      "ComputerSystem": {
+        "count": 8,
+        "features": [
+          "Multi-socket configurations",
+          "Virtualization support",
+          "Composable architecture",
+          "High availability",
+          "Remote management"
+        ]
+      },
+      "Processor": {
+        "count": 16,
+        "features": [
+          "Multi-core, multi-thread",
+          "Advanced architectures",
+          "High clock speeds",
+          "Large cache sizes",
+          "Power efficiency"
+        ]
+      },
+      "Memory": {
+        "count": 64,
+        "features": [
+          "High-speed DDR5",
+          "Large capacities",
+          "ECC protection",
+          "Multi-channel",
+          "NVDIMM support"
+        ]
+      },
+      "NetworkAdapter": {
+        "count": 16,
+        "features": [
+          "High-speed Ethernet",
+          "RDMA capabilities",
+          "Low latency",
+          "Multiple ports",
+          "Advanced offloading"
+        ]
+      }
+    },
+    "presentation_highlights": [
+      "Cutting-edge processor technologies",
+      "High-performance memory systems",
+      "Network performance optimization",
+      "Scalable compute architecture",
+      "Enterprise-grade reliability"
+    ]
+  },
+  "modular_infrastructure": {
+    "name": "Modular and Composable Infrastructure",
+    "description": "Flexible, scalable infrastructure with modular design and composable capabilities",
+    "focus_areas": [
+      "Modular chassis design",
+      "Fabric interconnect technologies",
+      "Management and orchestration",
+      "Physical security and monitoring",
+      "Scalability and growth"
+    ],
+    "devices": {
+      "Chassis": {
+        "count": 4,
+        "features": [
+          "Modular design",
+          "Expansion capabilities",
+          "Power distribution",
+          "Thermal management",
+          "Physical security"
+        ]
+      },
+      "Manager": {
+        "count": 2,
+        "features": [
+          "Centralized management",
+          "Multi-chassis support",
+          "Automation capabilities",
+          "Monitoring and alerting",
+          "Security features"
+        ]
+      },
+      "Fabric": {
+        "count": 2,
+        "features": [
+          "High-speed interconnects",
+          "Multiple protocols",
+          "Scalable architecture",
+          "Performance optimization",
+          "Management integration"
+        ]
+      },
+      "Switch": {
+        "count": 8,
+        "features": [
+          "High-port density",
+          "Multiple protocols",
+          "Performance optimization",
+          "Management capabilities",
+          "Redundancy support"
+        ]
+      },
+      "Port": {
+        "count": 64,
+        "features": [
+          "Multiple protocols",
+          "High-speed connections",
+          "Management integration",
+          "Performance monitoring",
+          "Security features"
+        ]
+      }
+    },
+    "presentation_highlights": [
+      "Modular and scalable design",
+      "Composable architecture",
+      "High-speed fabric interconnects",
+      "Centralized management",
+      "Physical security features"
+    ]
+  },
+  "edge_computing": {
+    "name": "Edge Computing Infrastructure",
+    "description": "Distributed, resilient infrastructure optimized for edge workloads and IoT integration",
+    "focus_areas": [
+      "Edge-optimized form factors",
+      "Local storage and processing",
+      "Network connectivity options",
+      "Environmental resilience",
+      "Remote management"
+    ],
+    "devices": {
+      "ComputerSystem": {
+        "count": 4,
+        "features": [
+          "Compact form factors",
+          "Power efficiency",
+          "Rugged design",
+          "Local processing",
+          "Edge optimization"
+        ]
+      },
+      "StorageController": {
+        "count": 2,
+        "features": [
+          "Local storage management",
+          "Edge-optimized protocols",
+          "Data protection",
+          "Performance optimization",
+          "Remote management"
+        ]
+      },
+      "Drive": {
+        "count": 8,
+        "features": [
+          "NVMe and SSD options",
+          "High reliability",
+          "Power efficiency",
+          "Environmental tolerance",
+          "Local caching"
+        ]
+      },
+      "Chassis": {
+        "count": 2,
+        "features": [
+          "Compact design",
+          "Environmental protection",
+          "Power management",
+          "Thermal design",
+          "Mounting options"
+        ]
+      }
+    },
+    "presentation_highlights": [
+      "Edge-optimized design",
+      "Environmental resilience",
+      "Local processing capabilities",
+      "Remote management",
+      "IoT integration support"
+    ]
+  },
+  "cloud_native": {
+    "name": "Cloud-Native Infrastructure",
+    "description": "Scalable, automated infrastructure designed for cloud-native workloads and orchestration",
+    "focus_areas": [
+      "Automation and orchestration",
+      "Scalable architecture",
+      "API-driven management",
+      "Multi-tenant support",
+      "Cloud integration"
+    ],
+    "devices": {
+      "ComputerSystem": {
+        "count": 16,
+        "features": [
+          "Automated provisioning",
+          "Scalable resources",
+          "API management",
+          "Multi-tenant support",
+          "Cloud integration"
+        ]
+      },
+      "StorageController": {
+        "count": 8,
+        "features": [
+          "Software-defined storage",
+          "Automated management",
+          "API-driven control",
+          "Multi-protocol support",
+          "Cloud integration"
+        ]
+      },
+      "Manager": {
+        "count": 4,
+        "features": [
+          "Orchestration capabilities",
+          "API management",
+          "Automation engine",
+          "Multi-tenant support",
+          "Cloud integration"
+        ]
+      }
+    },
+    "presentation_highlights": [
+      "Automated infrastructure",
+      "API-driven management",
+      "Scalable architecture",
+      "Cloud integration",
+      "Multi-tenant support"
+    ]
+  },
+  "ai_ml_ready": {
+    "name": "AI/ML Ready Infrastructure",
+    "description": "High-performance infrastructure optimized for artificial intelligence and machine learning workloads",
+    "focus_areas": [
+      "GPU and accelerator support",
+      "High-speed interconnects",
+      "Large memory configurations",
+      "Storage performance",
+      "Network optimization"
+    ],
+    "devices": {
+      "ComputerSystem": {
+        "count": 12,
+        "features": [
+          "GPU acceleration",
+          "High memory capacity",
+          "Fast interconnects",
+          "Performance optimization",
+          "AI/ML workloads"
+        ]
+      },
+      "Processor": {
+        "count": 24,
+        "features": [
+          "High core counts",
+          "Large caches",
+          "Vector instructions",
+          "Performance optimization",
+          "AI/ML acceleration"
+        ]
+      },
+      "Memory": {
+        "count": 96,
+        "features": [
+          "Large capacities",
+          "High bandwidth",
+          "Low latency",
+          "GPU memory",
+          "AI/ML optimization"
+        ]
+      },
+      "StorageController": {
+        "count": 6,
+        "features": [
+          "High-performance storage",
+          "NVMe optimization",
+          "Parallel access",
+          "AI/ML workloads",
+          "Performance monitoring"
+        ]
+      }
+    },
+    "presentation_highlights": [
+      "GPU acceleration support",
+      "High-performance memory",
+      "Fast storage access",
+      "Network optimization",
+      "AI/ML workload optimization"
+    ]
+  }
+}

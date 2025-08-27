@@ -1,0 +1,235 @@
+{
+  "welcome_message": {
+    "title": "AI-Driven Digital Twin Demo for SNIA SDC 2025",
+    "subtitle": "Enterprise Infrastructure Simulation Powered by Azure OpenAI GPT-4",
+    "description": "Demonstrating how Large Language Models can generate DMTF Redfish and SNIA Swordfish compliant device simulations using official specifications from DSP2043_2025.2",
+    "key_points": [
+      "Enterprise-grade infrastructure simulation",
+      "Full Redfish and SNIA Swordfish compliance",
+      "Azure OpenAI GPT-4 powered generation",
+      "Professional validation and quality assurance",
+      "SNIA SDC 2025 presentation ready"
+    ]
+  },
+  "demo_flow": {
+    "introduction": {
+      "title": "Demo Introduction",
+      "duration": "2 minutes",
+      "content": [
+        "Welcome to SNIA SDC 2025",
+        "AI-Driven Digital Twin concept",
+        "Redfish and SNIA Swordfish standards",
+        "Azure OpenAI GPT-4 integration",
+        "Demo objectives and structure"
+      ]
+    },
+    "architecture_overview": {
+      "title": "System Architecture",
+      "duration": "3 minutes",
+      "content": [
+        "Overall system design",
+        "Azure OpenAI GPT-4 integration",
+        "Redfish specification compliance",
+        "Validation and quality assurance",
+        "Demo scenario capabilities"
+      ]
+    },
+    "live_generation": {
+      "title": "Live Device Generation",
+      "duration": "5 minutes",
+      "content": [
+        "Real-time device generation",
+        "Enterprise storage infrastructure",
+        "High-performance compute systems",
+        "Modular infrastructure components",
+        "Edge computing solutions"
+      ]
+    },
+    "validation_demonstration": {
+      "title": "Quality Assurance",
+      "duration": "3 minutes",
+      "content": [
+        "Redfish compliance validation",
+        "Business logic verification",
+        "Cross-field validation",
+        "Quality scoring and metrics",
+        "Professional standards adherence"
+      ]
+    },
+    "scenario_demos": {
+      "title": "Demo Scenarios",
+      "duration": "7 minutes",
+      "content": [
+        "Enterprise storage infrastructure",
+        "High-performance computing",
+        "Modular and composable systems",
+        "Edge computing solutions",
+        "Cloud-native infrastructure",
+        "AI/ML ready systems"
+      ]
+    },
+    "q_and_a": {
+      "title": "Questions and Discussion",
+      "duration": "5 minutes",
+      "content": [
+        "Technical questions",
+        "Implementation details",
+        "Future enhancements",
+        "Industry applications",
+        "Standards compliance"
+      ]
+    }
+  },
+  "talking_points": {
+    "opening": [
+      "Welcome to SNIA SDC 2025! Today we're demonstrating something truly innovative",
+      "We're showing how AI can generate enterprise infrastructure that's fully compliant with industry standards",
+      "This isn't just a demo - it's a glimpse into the future of infrastructure management"
+    ],
+    "ai_integration": [
+      "Azure OpenAI GPT-4 brings enterprise-grade AI capabilities to infrastructure simulation",
+      "The model understands Redfish and SNIA Swordfish standards at a deep level",
+      "We're generating infrastructure that's not just realistic, but enterprise-ready"
+    ],
+    "standards_compliance": [
+      "Every generated device strictly adheres to DMTF Redfish specifications",
+      "SNIA Swordfish extensions are fully supported and validated",
+      "Compliance isn't optional - it's built into every generation"
+    ],
+    "enterprise_quality": [
+      "These aren't toy examples - they're enterprise-grade infrastructure specifications",
+      "Realistic values, proper validation, and professional quality throughout",
+      "Suitable for actual infrastructure planning and demonstration"
+    ],
+    "innovation_highlight": [
+      "We're bridging the gap between AI and enterprise infrastructure",
+      "This opens new possibilities for automated infrastructure design",
+      "Imagine generating entire data center specifications with AI assistance"
+    ],
+    "closing": [
+      "This demo represents the convergence of AI and enterprise infrastructure",
+      "The future of infrastructure management is intelligent, automated, and standards-compliant",
+      "Thank you for joining us on this journey into the future"
+    ]
+  },
+  "technical_highlights": {
+    "ai_capabilities": [
+      "Azure OpenAI GPT-4 integration for enterprise-grade AI",
+      "Deep understanding of Redfish and SNIA Swordfish standards",
+      "Context-aware device generation with realistic specifications",
+      "Multi-retry validation pipeline for quality assurance"
+    ],
+    "standards_compliance": [
+      "Full DMTF Redfish 2025.2 specification compliance",
+      "SNIA Swordfish extension support and validation",
+      "Official DSP2043_2025.2 mockup integration",
+      "Professional validation rules and business logic"
+    ],
+    "enterprise_features": [
+      "Enterprise-grade infrastructure simulation",
+      "Advanced RAID and storage technologies",
+      "High-performance compute capabilities",
+      "Modular and composable architecture support"
+    ],
+    "quality_assurance": [
+      "Comprehensive validation framework",
+      "Cross-field business logic validation",
+      "Professional quality scoring and metrics",
+      "Presentation-ready output generation"
+    ]
+  },
+  "audience_engagement": {
+    "interactive_elements": [
+      "Live device generation during presentation",
+      "Real-time validation and quality scoring",
+      "Multiple demo scenario demonstrations",
+      "Audience-driven scenario selection"
+    ],
+    "visual_elements": [
+      "Rich terminal output with professional formatting",
+      "Real-time progress indicators and status updates",
+      "Compliance scoring and quality metrics",
+      "Enterprise infrastructure visualization"
+    ],
+    "technical_depth": [
+      "Deep dive into Redfish compliance",
+      "SNIA Swordfish extension demonstration",
+      "Business logic validation examples",
+      "Quality assurance methodology"
+    ],
+    "business_value": [
+      "Infrastructure automation possibilities",
+      "Standards compliance automation",
+      "AI-assisted infrastructure design",
+      "Quality assurance automation"
+    ]
+  },
+  "demo_scenarios": {
+    "enterprise_storage": {
+      "title": "Enterprise Storage Infrastructure",
+      "focus": "High-performance storage with advanced features",
+      "key_features": [
+        "Advanced RAID technologies",
+        "NVMe and high-speed protocols",
+        "Enterprise management capabilities",
+        "SNIA Swordfish compliance"
+      ]
+    },
+    "high_performance_compute": {
+      "title": "High-Performance Computing",
+      "focus": "Modern compute infrastructure",
+      "key_features": [
+        "Multi-core processor architectures",
+        "High-speed memory technologies",
+        "Network performance optimization",
+        "Enterprise-grade reliability"
+      ]
+    },
+    "modular_infrastructure": {
+      "title": "Modular and Composable Systems",
+      "focus": "Flexible, scalable infrastructure",
+      "key_features": [
+        "Modular chassis design",
+        "Fabric interconnect technologies",
+        "Centralized management",
+        "Physical security features"
+      ]
+    },
+    "edge_computing": {
+      "title": "Edge Computing Solutions",
+      "focus": "Distributed, resilient infrastructure",
+      "key_features": [
+        "Edge-optimized design",
+        "Environmental resilience",
+        "Local processing capabilities",
+        "IoT integration support"
+      ]
+    }
+  },
+  "presentation_tips": {
+    "timing": [
+      "Total presentation: 25 minutes",
+      "Keep live demos under 5 minutes each",
+      "Allow 5 minutes for Q&A",
+      "Have backup scenarios ready"
+    ],
+    "audience_interaction": [
+      "Ask for scenario preferences",
+      "Encourage questions during demos",
+      "Highlight technical achievements",
+      "Emphasize business value"
+    ],
+    "technical_demonstration": [
+      "Show real-time generation",
+      "Demonstrate validation process",
+      "Highlight compliance features",
+      "Showcase enterprise quality"
+    ],
+    "professional_presentation": [
+      "Maintain professional demeanor",
+      "Use clear, technical language",
+      "Highlight innovation aspects",
+      "Emphasize standards compliance"
+    ]
+  }
+}

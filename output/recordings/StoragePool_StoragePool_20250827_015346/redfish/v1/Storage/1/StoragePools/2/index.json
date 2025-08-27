@@ -1,0 +1,182 @@
+{
+  "@odata.type": "#StoragePool.v1_12_0.StoragePool",
+  "@odata.id": "/redfish/v1/Storage/1/StoragePools/2",
+  "Id": "2",
+  "Name": "Enterprise NVMe Storage Pool",
+  "Description": "High-Performance NVMe Storage Pool for Enterprise Applications",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Capacity": {
+    "Data": {
+      "AllocatedBytes": 22000000000000,
+      "ConsumedBytes": 18200000000000,
+      "GuaranteedBytes": 20000000000000,
+      "ProvisionedBytes": 25000000000000
+    },
+    "Metadata": {
+      "AllocatedBytes": 400000000000,
+      "ConsumedBytes": 350000000000,
+      "GuaranteedBytes": 400000000000,
+      "ProvisionedBytes": 400000000000
+    },
+    "Snapshot": {
+      "AllocatedBytes": 200000000000,
+      "ConsumedBytes": 150000000000,
+      "GuaranteedBytes": 200000000000,
+      "ProvisionedBytes": 250000000000
+    }
+  },
+  "IOStatistics": {
+    "ReadIOs": 789123456,
+    "WriteIOs": 512345678,
+    "ReadBytes": 19500000000000,
+    "WriteBytes": 14400000000000,
+    "ReadHitIOs": 625000000,
+    "WriteHitIOs": 410000000,
+    "ReadMissIOs": 164123456,
+    "WriteMissIOs": 102345678,
+    "ReadLatencyMicroseconds": {
+      "Min": 95,
+      "Max": 2100,
+      "Avg": 320
+    },
+    "WriteLatencyMicroseconds": {
+      "Min": 120,
+      "Max": 2700,
+      "Avg": 410
+    }
+  },
+  "RAIDType": [
+    "RAID6",
+    "RAID10"
+  ],
+  "StoragePoolType": [
+    "ThinProvisioned",
+    "Deduplicated",
+    "Compressed"
+  ],
+  "AllocatedPools": [
+    {
+      "@odata.id": "/redfish/v1/StoragePools/2"
+    }
+  ],
+  "CapacitySources": [
+    {
+      "ProvidedCapacity": {
+        "Data": {
+          "AllocatedBytes": 22000000000000,
+          "ProvisionedBytes": 25000000000000
+        }
+      },
+      "Resource": {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/1"
+      }
+    },
+    {
+      "ProvidedCapacity": {
+        "Data": {
+          "AllocatedBytes": 22000000000000,
+          "ProvisionedBytes": 25000000000000
+        }
+      },
+      "Resource": {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/2"
+      }
+    }
+  ],
+  "Redundancy": [
+    {
+      "@odata.id": "/redfish/v1/StoragePools/2/Redundancy/1"
+    }
+  ],
+  "Links": {
+    "Members": [
+      {
+        "@odata.id": "/redfish/v1/Volumes/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Volumes/2"
+      }
+    ],
+    "DedicatedSpareDrives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/3"
+      }
+    ],
+    "AllocatedVolumes": [
+      {
+        "@odata.id": "/redfish/v1/Volumes/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Volumes/2"
+      }
+    ],
+    "Oem": {
+      "SNIA": {
+        "StorageTieringPolicy": "AutoTier",
+        "DataProtection": [
+          "Snapshot",
+          "Replication"
+        ],
+        "PerformanceClass": "NVMe_Enterprise",
+        "DataReduction": {
+          "CompressionEnabled": true,
+          "DeduplicationEnabled": true,
+          "CompressionRatio": 1.9,
+          "DeduplicationRatio": 1.7
+        },
+        "QoS": {
+          "MaxIOPS": 350000,
+          "MinIOPS": 20000,
+          "MaxThroughputMBps": 8000,
+          "MinThroughputMBps": 1500,
+          "LatencyGuaranteeMicroseconds": 500
+        }
+      }
+    }
+  },
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_3_0.StoragePoolExtensions",
+      "CloudIntegration": {
+        "CloudBackupEnabled": true,
+        "ReplicationTargets": [
+          {
+            "TargetType": "PublicCloud",
+            "TargetLocation": "Azure",
+            "ReplicationMode": "Async"
+          }
+        ]
+      },
+      "SLO": {
+        "Availability": "99.9999%",
+        "RPOSeconds": 30,
+        "RTOSeconds": 120,
+        "BurstIOPS": 500000
+      },
+      "DataMigration": {
+        "ActiveMigrations": 1,
+        "MigrationType": [
+          "Live",
+          "Scheduled"
+        ]
+      }
+    }
+  },
+  "Actions": {
+    "#StoragePool.Initialize": {
+      "target": "/redfish/v1/StoragePools/2/Actions/StoragePool.Initialize",
+      "InitializeType@Redfish.AllowableValues": [
+        "Fast",
+        "Slow",
+        "Verify"
+      ]
+    },
+    "#StoragePool.AssignCapacity": {
+      "target": "/redfish/v1/StoragePools/2/Actions/StoragePool.AssignCapacity"
+    }
+  }
+}

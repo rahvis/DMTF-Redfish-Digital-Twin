@@ -1,0 +1,18 @@
+{
+  "@odata.type": "#Drive.v1_13_0.Drive",
+  "@odata.id": "/redfish/v1/Storage/1/Drives/Bay1",
+  "Id": "Bay1",
+  "Name": "Drive Bay 1",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK"
+  },
+  "Model": "Enterprise NVMe 3.84TB",
+  "Manufacturer": "Contoso",
+  "SerialNumber": "Z99XXY12345678",
+  "Protocol": "NVMe",
+  "MediaType": "SSD",
+  "CapacityBytes": 3840755982336,
+  "BlockSizeBytes": 512,
+  "RotationSpeedRPM": 0
+}

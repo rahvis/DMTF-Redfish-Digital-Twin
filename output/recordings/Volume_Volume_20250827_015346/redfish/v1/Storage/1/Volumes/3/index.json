@@ -1,0 +1,106 @@
+{
+  "@odata.type": "#Volume.v1_12_0.Volume",
+  "@odata.id": "/redfish/v1/Storage/1/Volumes/3",
+  "Id": "3",
+  "Name": "Enterprise NVMe Volume 3",
+  "Description": "High-performance NVMe-backed volume for enterprise workloads. Supports advanced data protection and provisioning features.",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 1099511627776,
+  "VolumeType": "RawDevice",
+  "Encrypted": true,
+  "EncryptionTypes": [
+    "AES256-XTS"
+  ],
+  "BlockSizeBytes": 4096,
+  "Identifiers": [
+    {
+      "DurableNameFormat": "NAA",
+      "DurableName": "naa.6001405f6a4d314d5852496b76304c6d"
+    }
+  ],
+  "AccessCapabilities": [
+    "Read",
+    "Write",
+    "Append"
+  ],
+  "ReplicaTargets": [
+    {
+      "@odata.id": "/redfish/v1/Storage/1/Volumes/ReplicaTarget1"
+    }
+  ],
+  "OptimumIOSizeBytes": 1048576,
+  "ProvisioningPolicy": {
+    "ProvisioningType": "Thin",
+    "IsSpaceEfficient": true
+  },
+  "Oem": {
+    "SNIA": {
+      "ProvisionedCapacityBytes": 1159641169920,
+      "DataProtection": {
+        "RaidType": "RAID5",
+        "SpareDrives": 1,
+        "RebuildStatus": "Optimal"
+      },
+      "StorageClass": "NVMe",
+      "PerformanceTier": "Tier0",
+      "QoS": {
+        "MaxIOPS": 500000,
+        "MinIOPS": 100000,
+        "MaxThroughputMBps": 8000
+      },
+      "DataReduction": {
+        "CompressionEnabled": true,
+        "DeduplicationEnabled": true,
+        "EstimatedSavingsRatio": 2.3
+      },
+      "GeographicPlacement": "DataCenter-1-RackA"
+    }
+  },
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/4"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/5"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/6"
+      }
+    ],
+    "StorageGroups": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/StorageGroups/Primary"
+      }
+    ]
+  },
+  "Operations": [
+    {
+      "OperationName": "Snapshot",
+      "OperationApplyTimeSupport": "Immediate"
+    },
+    {
+      "OperationName": "Clone",
+      "OperationApplyTimeSupport": "Immediate"
+    }
+  ],
+  "Actions": {
+    "#Volume.Initialize": {
+      "target": "/redfish/v1/Storage/1/Volumes/3/Actions/Volume.Initialize",
+      "InitializeType@Redfish.AllowableValues": [
+        "Fast",
+        "Slow"
+      ]
+    },
+    "#Volume.Snapshot": {
+      "target": "/redfish/v1/Storage/1/Volumes/3/Actions/Volume.Snapshot"
+    },
+    "#Volume.Clone": {
+      "target": "/redfish/v1/Storage/1/Volumes/3/Actions/Volume.Clone"
+    }
+  }
+}

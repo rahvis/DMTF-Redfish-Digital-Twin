@@ -1,0 +1,49 @@
+{
+  "StoragePool": {
+    "description": "SNIA Swordfish extension for Storage Pools",
+    "properties": {
+      "@odata.type": {
+        "pattern": "^#StoragePool\\.v[0-9]+_[0-9]+_[0-9]+\\.StoragePool$"
+      },
+      "Capacity": {
+        "type": "object",
+        "properties": {
+          "Data": {
+            "type": "object",
+            "properties": {
+              "AllocatedBytes": {
+                "type": "integer"
+              },
+              "ConsumedBytes": {
+                "type": "integer"
+              },
+              "GuaranteedBytes": {
+                "type": "integer"
+              },
+              "ProvisionedBytes": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "IOStatistics": {
+        "type": "object",
+        "properties": {
+          "ReadHitIORequests": {
+            "type": "integer"
+          },
+          "ReadIOKiBytes": {
+            "type": "integer"
+          },
+          "WriteHitIORequests": {
+            "type": "integer"
+          },
+          "WriteIOKiBytes": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

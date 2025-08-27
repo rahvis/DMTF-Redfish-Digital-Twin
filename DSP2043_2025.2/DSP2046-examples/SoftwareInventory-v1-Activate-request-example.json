@@ -1,0 +1,6 @@
+{
+    "@Redfish.Copyright": "Copyright 2014-2025 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright.",
+    "Targets": [
+        "/redfish/v1/Managers/1"
+    ]
+}

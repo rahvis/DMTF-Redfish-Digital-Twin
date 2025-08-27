@@ -1,0 +1,104 @@
+{
+  "@odata.type": "#StorageController.v1_19_0.StorageController",
+  "@odata.id": "/redfish/v1/Storage/1/Controllers/2",
+  "Id": "2",
+  "Name": "Enterprise NVMe Storage Controller",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Manufacturer": "Acme Storage Solutions",
+  "Model": "NVMeX-8000E",
+  "SerialNumber": "SN25-ACME-0002",
+  "FirmwareVersion": "6.2.1-2025E",
+  "AssetTag": "SDC2025-RACK1-CTRL2",
+  "PartNumber": "NVX-8000E-CTRL",
+  "SKU": "NVX8000E-PRO",
+  "SupportedControllerProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "SupportedDeviceProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "PCIeInterface": {
+    "PCIeType": "Gen5",
+    "Lanes": 16
+  },
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/2/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/2/Drives/2"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/2/Drives/3"
+      }
+    ],
+    "StorageServices": [
+      {
+        "@odata.id": "/redfish/v1/StorageServices/2"
+      }
+    ],
+    "Endpoints": [
+      {
+        "@odata.id": "/redfish/v1/Storage/2/Endpoints/1"
+      }
+    ]
+  },
+  "SupportedRAIDTypes": [
+    "RAID0",
+    "RAID1",
+    "RAID5",
+    "RAID6",
+    "RAID10"
+  ],
+  "ControllerRates": {
+    "MaxIOPS": 1500000,
+    "MaxThroughputMBps": 8000
+  },
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_4_0.StorageControllerExtension",
+      "NVMeMultipath": true,
+      "PersistentMemorySupport": true,
+      "AdvancedDataProtection": [
+        "EndToEndDataProtection",
+        "DataAtRestEncryption",
+        "FIPS140-3"
+      ],
+      "FirmwareUpdatePolicy": {
+        "AutoUpdateEnabled": true,
+        "RollbackSupported": true
+      },
+      "QoS": {
+        "MinGuaranteedIOPS": 500000,
+        "MinGuaranteedThroughputMBps": 2500,
+        "LatencyMicroseconds99thPercentile": 90
+      }
+    }
+  },
+  "Actions": {
+    "#StorageController.Reset": {
+      "target": "/redfish/v1/Storage/2/Controllers/2/Actions/StorageController.Reset",
+      "ResetType@Redfish.AllowableValues": [
+        "GracefulRestart",
+        "ForceRestart"
+      ]
+    },
+    "#StorageController.SetEncryptionKey": {
+      "target": "/redfish/v1/Storage/2/Controllers/2/Actions/StorageController.SetEncryptionKey"
+    }
+  },
+  "Location": {
+    "Info": "Rack 1, Slot 2",
+    "InfoFormat": "Rack/Slot"
+  },
+  "Description": "High-performance, enterprise-grade NVMe storage controller with multi-protocol and advanced data protection, suitable for SDC 2025 demonstration."
+}

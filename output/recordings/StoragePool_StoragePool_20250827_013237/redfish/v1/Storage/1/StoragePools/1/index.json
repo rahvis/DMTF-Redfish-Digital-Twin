@@ -1,0 +1,137 @@
+{
+  "@odata.type": "#StoragePool.v1_5_0.StoragePool",
+  "@odata.id": "/redfish/v1/Storage/1/StoragePools/1",
+  "Id": "SP1",
+  "Name": "Enterprise NVMe Storage Pool",
+  "Description": "High-performance NVMe storage pool with advanced enterprise features suitable for SNIA SDC 2025 demonstration.",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK"
+  },
+  "Capacity": {
+    "Data": {
+      "AllocatedBytes": 10321247334400,
+      "ConsumedBytes": 8743452120064,
+      "GuaranteedBytes": 10321247334400,
+      "ProvisionedBytes": 10737418240000
+    },
+    "Metadata": {
+      "AllocatedBytes": 21474836480,
+      "ConsumedBytes": 21474836480
+    }
+  },
+  "StoragePoolType": "ThinProvisioned",
+  "RAIDType": [
+    "RAID6",
+    "RAID10"
+  ],
+  "SupportedClassesOfService": [
+    "/redfish/v1/ClassesOfService/COS1",
+    "/redfish/v1/ClassesOfService/COS2"
+  ],
+  "SupportedAccessCapabilities": [
+    "Read",
+    "Write",
+    "Snapshot",
+    "Clone",
+    "Deduplication",
+    "Compression",
+    "EncryptionAtRest"
+  ],
+  "IOStatistics": {
+    "ReadIORequests": 1234567890,
+    "WriteIORequests": 987654321,
+    "ReadBytes": 78965412345678,
+    "WriteBytes": 45678912345678,
+    "AverageIOQueueDepth": 42,
+    "IOPS": {
+      "Read": 85000,
+      "Write": 77000
+    },
+    "Latency": {
+      "ReadMilliseconds": 0.8,
+      "WriteMilliseconds": 1.2
+    }
+  },
+  "Links": {
+    "AllocatedVolumes": [
+      {
+        "@odata.id": "/redfish/v1/Volumes/Vol1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Volumes/Vol2"
+      }
+    ],
+    "Storage": [
+      {
+        "@odata.id": "/redfish/v1/Systems/1/Storage/1"
+      }
+    ],
+    "ManagedBy": [
+      {
+        "@odata.id": "/redfish/v1/Managers/1"
+      }
+    ]
+  },
+  "Metrics": {
+    "@odata.id": "/redfish/v1/StoragePools/SP1/Metrics"
+  },
+  "EncryptionTypes": [
+    "AES256-XTS",
+    "FIPS140-2"
+  ],
+  "SNIA_Swordfish": {
+    "DataReduction": {
+      "DeduplicationEnabled": true,
+      "CompressionEnabled": true,
+      "CurrentEfficiencyRatio": 2.4
+    },
+    "Replication": {
+      "ReplicationEnabled": true,
+      "ReplicationType": "Asynchronous",
+      "ReplicationTargets": [
+        "/redfish/v1/StoragePools/SP2"
+      ]
+    },
+    "QualityOfService": {
+      "MinIOPS": 40000,
+      "MaxIOPS": 120000,
+      "MaxLatencyMilliseconds": 2.0
+    }
+  },
+  "Redundancy": [
+    {
+      "RedundancyEnabled": true,
+      "Mode": "Controller",
+      "MaxNumSupported": 2,
+      "MinNumNeeded": 2,
+      "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    }
+  ],
+  "AllocationPolicy": "Dynamic",
+  "SupportedMediaTypes": [
+    "NVMe",
+    "SSD"
+  ],
+  "SupportedRAIDTypes": [
+    "RAID5",
+    "RAID6",
+    "RAID10"
+  ],
+  "SupportedProtocols": [
+    "NVMe-oF",
+    "iSCSI",
+    "FC"
+  ],
+  "OEM": {
+    "VendorName": "ExampleStorageCorp",
+    "AdvancedFeatures": {
+      "Tiering": true,
+      "SelfHealing": true,
+      "TelemetryEnabled": true
+    }
+  }
+}

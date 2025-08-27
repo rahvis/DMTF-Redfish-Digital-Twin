@@ -1,0 +1,25 @@
+{
+  "resource_type": "Volume",
+  "devices": [
+    {
+      "id": "1",
+      "name": "Enterprise NVMe Volume 1",
+      "odata_id": "/redfish/v1/Storage/1/Volumes/1",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Enterprise-Data-Volume-02",
+      "odata_id": "/redfish/v1/Storage/1/Volumes/2",
+      "status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+      }
+    }
+  ]
+}

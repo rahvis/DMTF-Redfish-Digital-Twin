@@ -1,0 +1,14 @@
+{
+  "@odata.type": "#StoragePoolCollection.StoragePoolCollection",
+  "@odata.id": "/redfish/v1/Storage/1/StoragePools",
+  "Name": "StoragePool Collection",
+  "Members@odata.count": 2,
+  "Members": [
+    {
+      "@odata.id": "/redfish/v1/Storage/1/StoragePools/1"
+    },
+    {
+      "@odata.id": "/redfish/v1/Storage/1/StoragePools/2"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "@odata.type": "#StoragePool.v1_19_0.StoragePool",
+  "@odata.id": "/redfish/v1/Storage/1/StoragePools/2",
+  "Id": "2",
+  "Name": "EnterpriseTier1StoragePool",
+  "Description": "High-performance, redundant storage pool for mission-critical workloads",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK"
+  },
+  "Capacity": {
+    "AllocatedBytes": 8246337208320,
+    "ConsumedBytes": 6925637152768,
+    "Guarantee": "ThinProvisioned",
+    "DataReduction": {
+      "CompressionEnabled": true,
+      "DeduplicationEnabled": true,
+      "CompressionRatio": 2.3,
+      "DeduplicationRatio": 1.8
+    },
+    "RemainingBytes": 1320700055552
+  },
+  "IOStatistics": {
+    "ReadIOPs": 84000,
+    "WriteIOPs": 62000,
+    "ReadThroughputBytesPerSecond": 1500000000,
+    "WriteThroughputBytesPerSecond": 1200000000,
+    "AverageReadLatencyMicroseconds": 300,
+    "AverageWriteLatencyMicroseconds": 350
+  },
+  "StoragePoolType": "RAID6",
+  "Redundancy": [
+    {
+      "Mode": "Controller",
+      "MaxSupported": 2,
+      "MinSupported": 2,
+      "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+      }
+    }
+  ],
+  "SupportedClassesOfService": [
+    {
+      "Id": "CoS-1",
+      "Name": "Gold",
+      "Description": "Low latency, highest IOPS and throughput, tiered SSD/NVMe storage",
+      "ProvisioningPolicy": "PerformanceOptimized"
+    },
+    {
+      "Id": "CoS-2",
+      "Name": "Silver",
+      "Description": "Balanced performance and capacity with hybrid SSD/HDD tiers",
+      "ProvisioningPolicy": "Balanced"
+    }
+  ],
+  "Links": {
+    "AllocatedVolumes": [
+      {
+        "@odata.id": "/redfish/v1/Volumes/101"
+      },
+      {
+        "@odata.id": "/redfish/v1/Volumes/102"
+      }
+    ],
+    "AllocatedDrives": [
+      {
+        "@odata.id": "/redfish/v1/Drives/44"
+      },
+      {
+        "@odata.id": "/redfish/v1/Drives/45"
+      },
+      {
+        "@odata.id": "/redfish/v1/Drives/46"
+      },
+      {
+        "@odata.id": "/redfish/v1/Drives/47"
+      }
+    ],
+    "OwningStorageResource": {
+      "@odata.id": "/redfish/v1/StorageServices/1"
+    }
+  },
+  "Encryption": {
+    "EncryptionTypes": [
+      "ControllerBased",
+      "DriveBased"
+    ],
+    "Enabled": true,
+    "KeyManagement": "External"
+  },
+  "SNIA_Swordfish": {
+    "DataProtectionLines": [
+      {
+        "Type": "Snapshot",
+        "Enabled": true,
+        "RetentionPolicy": "30Days",
+        "RecoveryPointObjectiveSeconds": 300
+      },
+      {
+        "Type": "Replication",
+        "Enabled": true,
+        "ReplicationType": "Asynchronous",
+        "Target": {
+          "@odata.id": "/redfish/v1/StoragePools/replica-2"
+        },
+        "RecoveryTimeObjectiveSeconds": 600
+      }
+    ],
+    "ServiceLevelObjectives": [
+      {
+        "Id": "SLO-1",
+        "Name": "MissionCritical",
+        "MaxLatencyMicroseconds": 500,
+        "MinIOPS": 50000,
+        "MaxIOPS": 120000
+      }
+    ],
+    "PerformanceOptimization": {
+      "NVMeoFEnabled": true,
+      "TieringEnabled": true,
+      "CXLMemoryPoolingEnabled": false
+    }
+  },
+  "Metrics": {
+    "@odata.id": "/redfish/v1/StoragePools/2/Metrics"
+  },
+  "Actions": {
+    "#StoragePool.Rebalance": {
+      "target": "/redfish/v1/StoragePools/2/Actions/StoragePool.Rebalance",
+      "title": "Rebalance StoragePool"
+    },
+    "#StoragePool.Optimize": {
+      "target": "/redfish/v1/StoragePools/2/Actions/StoragePool.Optimize",
+      "title": "Optimize StoragePool"
+    }
+  }
+}

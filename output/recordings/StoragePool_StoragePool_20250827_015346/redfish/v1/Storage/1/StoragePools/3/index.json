@@ -1,0 +1,145 @@
+{
+  "@odata.type": "#StoragePool.v1_11_0.StoragePool",
+  "@odata.id": "/redfish/v1/Storage/1/StoragePools/3",
+  "Id": "3",
+  "Name": "Enterprise Local StoragePool",
+  "Description": "Enterprise-grade local storage pool supporting SNIA Swordfish extensions for SDC 2025 demonstration.",
+  "Capacity": {
+    "AllocatedBytes": 6498724864000,
+    "ConsumedBytes": 5128973486080,
+    "GuaranteedBytes": 7000000000000,
+    "ProvisionedBytes": 8192000000000,
+    "DataReduction": {
+      "CompressionType": "Inline",
+      "CompressionEnabled": true,
+      "CompressionRatio": 2.1,
+      "DeduplicationEnabled": true,
+      "DeduplicationRatio": 1.7
+    }
+  },
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "StoragePoolType": [
+    "ThinProvisioned",
+    "RAID6",
+    "Tiered"
+  ],
+  "SupportedRAIDTypes": [
+    "RAID6",
+    "RAID10"
+  ],
+  "CapacitySources": [
+    {
+      "CapacitySourceType": [
+        "Physical"
+      ],
+      "ProvidedCapacityBytes": 8192000000000,
+      "DriveCount": 24,
+      "Drives": [
+        {
+          "@odata.id": "/redfish/v1/Drives/1"
+        },
+        {
+          "@odata.id": "/redfish/v1/Drives/2"
+        }
+      ]
+    }
+  ],
+  "IOStatistics": {
+    "OperationsPerSecond": 185000,
+    "ReadOperationsPerSecond": 110000,
+    "WriteOperationsPerSecond": 75000,
+    "LatencyMicroseconds": {
+      "AverageRead": 180,
+      "AverageWrite": 190
+    },
+    "BandwidthBytesPerSecond": {
+      "Read": 1800000000,
+      "Write": 1200000000
+    }
+  },
+  "SupportedClassesOfService": [
+    {
+      "@odata.id": "/redfish/v1/StorageService/1/ClassesOfService/Gold"
+    },
+    {
+      "@odata.id": "/redfish/v1/StorageService/1/ClassesOfService/Silver"
+    }
+  ],
+  "AllocatedPools": [
+    {
+      "@odata.id": "/redfish/v1/StoragePools/3"
+    }
+  ],
+  "CapacityAllocationPolicy": "Thin",
+  "EncryptionTypes": [
+    "AES256-XTS"
+  ],
+  "Redundancy": [
+    {
+      "Mode": "RAID6",
+      "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+      },
+      "MinNumDrives": 6,
+      "MaxNumDrives": 24
+    }
+  ],
+  "Links": {
+    "StorageVolumes": [
+      {
+        "@odata.id": "/redfish/v1/Volumes/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Volumes/2"
+      }
+    ],
+    "StorageSystems": [
+      {
+        "@odata.id": "/redfish/v1/StorageSystems/1"
+      }
+    ]
+  },
+  "SupportedProvisioningPolicies": [
+    "Thin",
+    "Thick"
+  ],
+  "Replication": {
+    "ReplicationEnabled": true,
+    "ReplicationType": [
+      "Snapshot",
+      "Asynchronous"
+    ],
+    "ReplicationTargets": [
+      {
+        "@odata.id": "/redfish/v1/StoragePools/4"
+      }
+    ]
+  },
+  "NVMeoFEnabled": true,
+  "TieringEnabled": true,
+  "IsCompressed": true,
+  "IsDeduplicated": true,
+  "@Redfish.Copyright": "Copyright (C) 2025 DMTF and SNIA. All rights reserved.",
+  "@Redfish.Swordfish.StoragePool": {
+    "DataIsolation": "Full",
+    "QualityOfService": {
+      "MinIOPS": 50000,
+      "MaxIOPS": 200000,
+      "MinBandwidthMBps": 600,
+      "MaxBandwidthMBps": 1800,
+      "BurstIOPS": 300000,
+      "BurstDurationSeconds": 60
+    },
+    "StorageTier": [
+      "NVMe",
+      "SAS",
+      "HDD"
+    ],
+    "PerformanceClass": "Enterprise"
+  }
+}

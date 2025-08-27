@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  digital-twin-demo:
+    build: .
+    container_name: ai-digital-twin-demo
+    environment:
+      # Azure OpenAI Configuration
+      - AZURE_OPENAI_API_KEY=${AZURE_OPENAI_API_KEY}
+      - AZURE_OPENAI_ENDPOINT=${AZURE_OPENAI_ENDPOINT}
+      - AZURE_OPENAI_API_VERSION=${AZURE_OPENAI_API_VERSION:-2024-04-01-preview}
+      - AZURE_OPENAI_DEPLOYMENT_NAME=${AZURE_OPENAI_DEPLOYMENT_NAME:-gpt-4.1}
+      - AZURE_OPENAI_EMBED_DEPLOYMENT_NAME=${AZURE_OPENAI_EMBED_DEPLOYMENT_NAME:-text-embedding-3-large}
+      
+      # Legacy Google Gemini (optional)
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      
+      # General Configuration
+      - MAX_RETRIES=${MAX_RETRIES:-3}
+      - TEMPERATURE=${TEMPERATURE:-0.7}
+      - DEMO_MODE=${DEMO_MODE:-interactive}
+      - DEMO_SPEED=${DEMO_SPEED:-1.0}
+      
+      # Redfish Configuration
+      - REDFISH_VERSION=${REDFISH_VERSION:-1.19.0}
+      - SCHEMA_VERSION=${SCHEMA_VERSION:-2025.2}
+      - STRICT_VALIDATION=${STRICT_VALIDATION:-true}
+    volumes:
+      # Mount output directory for persistent storage
+      - ./output:/app/output
+      # Mount Redfish specifications for external access
+      - ./DSP2043_2025.2:/app/DSP2043_2025.2:ro
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    healthcheck:
+      test: ["CMD", "python", "-c", "from config import Config; print('Health check passed')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    profiles:
+      - demo
+      - interactive
+      - presentation
+
+  # Service for running the automated demo
+  demo-runner:
+    build: .
+    container_name: ai-digital-twin-demo-runner
+    environment:
+      - AZURE_OPENAI_API_KEY=${AZURE_OPENAI_API_KEY}
+      - AZURE_OPENAI_ENDPOINT=${AZURE_OPENAI_ENDPOINT}
+      - AZURE_OPENAI_API_VERSION=${AZURE_OPENAI_API_VERSION:-2024-04-01-preview}
+      - AZURE_OPENAI_DEPLOYMENT_NAME=${AZURE_OPENAI_DEPLOYMENT_NAME:-gpt-4.1}
+      - DEMO_MODE=automated
+      - DEMO_SPEED=${DEMO_SPEED:-1.0}
+    volumes:
+      - ./output:/app/output
+      - ./DSP2043_2025.2:/app/DSP2043_2025.2:ro
+    command: ["python", "demo_fixed.py"]
+    profiles:
+      - demo
+
+  # Service for running the interactive menu
+  interactive:
+    build: .
+    container_name: ai-digital-twin-interactive
+    environment:
+      - AZURE_OPENAI_API_KEY=${AZURE_OPENAI_API_KEY}
+      - AZURE_OPENAI_ENDPOINT=${AZURE_OPENAI_ENDPOINT}
+      - AZURE_OPENAI_API_VERSION=${AZURE_OPENAI_API_VERSION:-2024-04-01-preview}
+      - AZURE_OPENAI_DEPLOYMENT_NAME=${AZURE_OPENAI_DEPLOYMENT_NAME:-gpt-4.1}
+      - DEMO_MODE=interactive
+    volumes:
+      - ./output:/app/output
+      - ./DSP2043_2025.2:/app/DSP2043_2025.2:ro
+    command: ["python", "main.py"]
+    stdin_open: true
+    tty: true
+    profiles:
+      - interactive
+
+volumes:
+  output:
+    driver: local

@@ -1,0 +1,89 @@
+{
+  "@odata.type": "#Volume.v1_19_0.Volume",
+  "@odata.id": "/redfish/v1/Storage/1/Volumes/1",
+  "Id": "1",
+  "Name": "Enterprise-Volume-01",
+  "Description": "Enterprise-grade NVMe Volume for SDC 2025 Demonstration",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 10995116277760,
+  "VolumeType": "RawDevice",
+  "Encrypted": true,
+  "EncryptionTypes": [
+    "AES256-XTS"
+  ],
+  "BlockSizeBytes": 4096,
+  "Identifiers": [
+    {
+      "DurableNameFormat": "NAA",
+      "DurableName": "naa.6001405f8a7b9e6d8c4d8e0000000001"
+    }
+  ],
+  "ReplicaInfo": {
+    "ReplicaType": "Snapshot",
+    "ReplicaState": "Synchronized",
+    "ReplicaRole": "Source"
+  },
+  "AccessCapabilities": [
+    "Read",
+    "Write",
+    "Append",
+    "Snapshot"
+  ],
+  "Operations": [
+    {
+      "OperationName": "Initialize",
+      "PercentageComplete": 100,
+      "OperationState": "Completed"
+    }
+  ],
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.VolumeExtensions.v1_0_0.Volume",
+      "DataReductionEnabled": true,
+      "DataReductionType": [
+        "Compression",
+        "Deduplication"
+      ],
+      "ProvisioningPolicy": "Thin",
+      "PerformanceTier": "Tier1-Flash",
+      "QoS": {
+        "MaxIOPS": 200000,
+        "MaxBandwidthMBps": 4000,
+        "MinIOPS": 10000,
+        "MinBandwidthMBps": 500
+      }
+    }
+  },
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/2"
+      }
+    ],
+    "StorageGroups": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/StorageGroups/1"
+      }
+    ]
+  },
+  "Actions": {
+    "#Volume.Initialize": {
+      "target": "/redfish/v1/Storage/1/Volumes/1/Actions/Volume.Initialize",
+      "InitializeType@Redfish.AllowableValues": [
+        "Fast",
+        "Slow",
+        "Remove"
+      ]
+    },
+    "#Volume.Snapshot": {
+      "target": "/redfish/v1/Storage/1/Volumes/1/Actions/Volume.Snapshot"
+    }
+  }
+}

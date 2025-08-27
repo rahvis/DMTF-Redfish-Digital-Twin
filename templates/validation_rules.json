@@ -1,0 +1,472 @@
+{
+  "required_fields": {
+    "all": [
+      "@odata.type",
+      "@odata.id",
+      "Id",
+      "Name",
+      "Status"
+    ],
+    "StorageController": [
+      "Manufacturer",
+      "Model",
+      "SerialNumber"
+    ],
+    "Drive": [
+      "CapacityBytes",
+      "Protocol",
+      "MediaType"
+    ],
+    "Volume": [
+      "CapacityBytes",
+      "VolumeType"
+    ],
+    "StoragePool": [
+      "Capacity"
+    ],
+    "Chassis": [
+      "ChassisType",
+      "Manufacturer",
+      "Model"
+    ],
+    "ComputerSystem": [
+      "SystemType",
+      "Manufacturer",
+      "Model"
+    ],
+    "Processor": [
+      "ProcessorType",
+      "ProcessorArchitecture",
+      "TotalCores"
+    ],
+    "Memory": [
+      "MemoryType",
+      "CapacityMiB",
+      "SpeedMHz"
+    ],
+    "NetworkAdapter": [
+      "AdapterType",
+      "SpeedMbps",
+      "PortCount"
+    ],
+    "Manager": [
+      "ManagerType",
+      "Model"
+    ],
+    "Fabric": [
+      "FabricType",
+      "MaxPorts"
+    ],
+    "Switch": [
+      "SwitchType",
+      "PortCount"
+    ],
+    "Port": [
+      "PortType",
+      "PortProtocol"
+    ]
+  },
+  "field_types": {
+    "@odata.type": "string",
+    "@odata.id": "string",
+    "Id": "string",
+    "Name": "string",
+    "Status": "object",
+    "CapacityBytes": "integer",
+    "CapacityMiB": "integer",
+    "Protocol": "string",
+    "Manufacturer": "string",
+    "Model": "string",
+    "SerialNumber": "string",
+    "PartNumber": "string",
+    "FirmwareVersion": "string",
+    "BlockSizeBytes": "integer",
+    "StripSizeBytes": "integer",
+    "OptimumIOSizeBytes": "integer",
+    "Encrypted": "boolean",
+    "ChassisType": "string",
+    "SystemType": "string",
+    "ProcessorType": "string",
+    "ProcessorArchitecture": "string",
+    "InstructionSet": "string",
+    "MaxSpeedMHz": "integer",
+    "TotalCores": "integer",
+    "TotalThreads": "integer",
+    "CacheSizeMiB": "integer",
+    "ThermalDesignPowerW": "integer",
+    "MemoryType": "string",
+    "DataWidthBits": "integer",
+    "BusWidthBits": "integer",
+    "SpeedMHz": "integer",
+    "SpeedMbps": "integer",
+    "AdapterType": "string",
+    "LinkStatus": "string",
+    "PortCount": "integer",
+    "MaxPorts": "integer",
+    "ManagerType": "string",
+    "NetworkProtocols": "array",
+    "FabricType": "string",
+    "MaxZones": "integer",
+    "MaxSwitches": "integer",
+    "SwitchType": "string",
+    "PortType": "string",
+    "PortProtocol": "string",
+    "PortMedium": "string",
+    "HotspareType": "string",
+    "PredictedMediaLifeLeftPercent": "integer",
+    "RAIDType": "string",
+    "DataRedundancy": "string",
+    "DataProtection": "string",
+    "AllocatedVolumes": "integer",
+    "AllocatedPools": "integer",
+    "SupportedRAIDTypes": "array",
+    "SupportedStripSizes": "array",
+    "SupportedVolumeTypes": "array",
+    "SupportedDeviceProtocols": "array",
+    "SupportedProtocols": "array",
+    "ControllerCapabilities": "object",
+    "PowerState": "string",
+    "ThermalState": "string",
+    "PhysicalSecurity": "string",
+    "BootSourceOverrideEnabled": "string",
+    "BootSourceOverrideTarget": "string",
+    "FabricStatus": "string"
+  },
+  "value_constraints": {
+    "Protocol": [
+      "NVMe",
+      "SAS",
+      "SATA",
+      "USB",
+      "PCIe",
+      "FC",
+      "iSCSI",
+      "FCoE",
+      "RoCE",
+      "InfiniBand"
+    ],
+    "VolumeType": [
+      "RawDevice",
+      "NonRedundant",
+      "Mirrored",
+      "StripedWithParity",
+      "SpannedMirrors",
+      "SpannedStripesWithParity",
+      "RAID5",
+      "RAID6",
+      "RAID10",
+      "RAID50",
+      "RAID60"
+    ],
+    "RAIDType": [
+      "RAID0",
+      "RAID1",
+      "RAID5",
+      "RAID6",
+      "RAID10",
+      "RAID50",
+      "RAID60",
+      "RAID1E",
+      "RAID5E",
+      "RAID5EE",
+      "RAID6E"
+    ],
+    "MediaType": [
+      "HDD",
+      "SSD",
+      "SMR",
+      "NVMe",
+      "Optical",
+      "Tape",
+      "Hybrid"
+    ],
+    "State": [
+      "Enabled",
+      "Disabled",
+      "StandbyOffline",
+      "StandbySpare",
+      "InTest",
+      "Starting",
+      "Absent",
+      "UnavailableOffline",
+      "Deferring",
+      "Quiesced",
+      "Updating"
+    ],
+    "Health": [
+      "OK",
+      "Warning",
+      "Critical",
+      "Degraded",
+      "Unknown"
+    ],
+    "BlockSizeBytes": [
+      512,
+      4096,
+      8192,
+      16384,
+      32768,
+      65536
+    ],
+    "StripSizeBytes": [
+      4096,
+      8192,
+      16384,
+      32768,
+      65536,
+      131072,
+      262144,
+      524288,
+      1048576
+    ],
+    "OptimumIOSizeBytes": [
+      4096,
+      8192,
+      16384,
+      32768,
+      65536,
+      131072,
+      262144,
+      524288,
+      1048576
+    ],
+    "RotationSpeedRPM": [
+      0,
+      5400,
+      7200,
+      10000,
+      15000,
+      18000
+    ],
+    "ChassisType": [
+      "RackMount",
+      "Blade",
+      "Enclosure",
+      "StandAlone",
+      "RackMountWithSliders",
+      "Card",
+      "Cartridge",
+      "Row",
+      "Pod",
+      "Expansion",
+      "Sidecar",
+      "Zone",
+      "Sled",
+      "Shelf",
+      "Drawer",
+      "Module",
+      "Component",
+      "Backplane",
+      "PowerStrip",
+      "StorageEnclosure"
+    ],
+    "SystemType": [
+      "Physical",
+      "Virtual",
+      "OS",
+      "PhysicallyPartitioned",
+      "VirtuallyPartitioned",
+      "Composed"
+    ],
+    "ProcessorArchitecture": [
+      "x86",
+      "IA-64",
+      "ARM",
+      "MIPS",
+      "Power",
+      "zArchitecture",
+      "RISC-V"
+    ],
+    "MemoryType": [
+      "DRAM",
+      "NVDIMM_N",
+      "NVDIMM_F",
+      "NVDIMM_P",
+      "IntelOptane",
+      "DDR",
+      "DDR2",
+      "DDR3",
+      "DDR4",
+      "DDR5",
+      "LPDDR",
+      "LPDDR2",
+      "LPDDR3",
+      "LPDDR4",
+      "LPDDR5"
+    ],
+    "AdapterType": [
+      "Ethernet",
+      "FibreChannel",
+      "InfiniBand",
+      "iSCSI",
+      "FCoE",
+      "RoCE",
+      "NVMe",
+      "SAS",
+      "SATA"
+    ],
+    "LinkStatus": [
+      "LinkUp",
+      "LinkDown",
+      "Starting",
+      "Training",
+      "NoLink"
+    ],
+    "ManagerType": [
+      "BMC",
+      "EnclosureManager",
+      "RackManager",
+      "AuxiliaryController",
+      "Service",
+      "ManagementController"
+    ],
+    "FabricType": [
+      "Ethernet",
+      "FibreChannel",
+      "InfiniBand",
+      "NVMe",
+      "SAS",
+      "PCIe"
+    ],
+    "SwitchType": [
+      "Ethernet",
+      "FibreChannel",
+      "InfiniBand",
+      "NVMe",
+      "SAS",
+      "PCIe"
+    ],
+    "PortType": [
+      "Upstream",
+      "Downstream",
+      "Bidirectional",
+      "Management",
+      "Console"
+    ],
+    "PortProtocol": [
+      "Ethernet",
+      "FibreChannel",
+      "InfiniBand",
+      "NVMe",
+      "SAS",
+      "SATA",
+      "PCIe",
+      "USB"
+    ],
+    "PortMedium": [
+      "Copper",
+      "Fiber",
+      "Wireless",
+      "Backplane"
+    ],
+    "HotspareType": [
+      "None",
+      "Global",
+      "Chassis",
+      "Dedicated"
+    ],
+    "PowerState": [
+      "On",
+      "Off",
+      "PoweringOn",
+      "PoweringOff",
+      "Reset",
+      "PowerCycle",
+      "PoweringUp",
+      "PoweringDown"
+    ],
+    "ThermalState": [
+      "Normal",
+      "Warm",
+      "Hot",
+      "Critical"
+    ],
+    "PhysicalSecurity": [
+      "Unlocked",
+      "Locked",
+      "ExternalInterfaceLockEnabled"
+    ],
+    "BootSourceOverrideEnabled": [
+      "Disabled",
+      "Once",
+      "Continuous"
+    ],
+    "BootSourceOverrideTarget": [
+      "None",
+      "Pxe",
+      "Floppy",
+      "Cd",
+      "Usb",
+      "Hdd",
+      "BiosSetup",
+      "Utilities",
+      "UefiTarget",
+      "SDCard",
+      "UefiHttp",
+      "UefiBootNext"
+    ],
+    "FabricStatus": [
+      "Enabled",
+      "Disabled",
+      "StandbyOffline",
+      "InTest",
+      "Starting",
+      "Absent"
+    ]
+  },
+  "advanced_validation": {
+    "cross_field_validation": {
+      "Drive": {
+        "if_MediaType_is_HDD": {
+          "RotationSpeedRPM": "required",
+          "BlockSizeBytes": "must_be_512_or_4096"
+        },
+        "if_MediaType_is_SSD": {
+          "RotationSpeedRPM": "must_be_0",
+          "BlockSizeBytes": "must_be_4096_or_higher"
+        }
+      },
+      "Volume": {
+        "if_RAIDType_is_RAID0": {
+          "DataRedundancy": "must_be_NonRedundant"
+        },
+        "if_RAIDType_is_RAID1": {
+          "DataRedundancy": "must_be_Mirrored"
+        }
+      }
+    },
+    "business_logic": {
+      "StorageController": {
+        "SupportedRAIDTypes": "must_include_basic_types",
+        "ControllerCapabilities": "must_include_RAID_support"
+      },
+      "StoragePool": {
+        "Capacity": "must_be_greater_than_allocated",
+        "SupportedVolumeTypes": "must_match_controller_capabilities"
+      }
+    }
+  },
+  "presentation_enhancements": {
+    "highlight_fields": [
+      "Manufacturer",
+      "Model",
+      "SerialNumber",
+      "CapacityBytes",
+      "Protocol",
+      "RAIDType",
+      "Status"
+    ],
+    "demo_scenarios": {
+      "enterprise_storage": ["StorageController", "Drive", "Volume", "StoragePool"],
+      "high_performance_compute": ["ComputerSystem", "Processor", "Memory", "NetworkAdapter"],
+      "modular_infrastructure": ["Chassis", "Manager", "Fabric", "Switch", "Port"],
+      "edge_computing": ["ComputerSystem", "StorageController", "Drive", "Chassis"]
+    },
+    "compliance_indicators": {
+      "redfish_compliant": "✓",
+      "swordfish_extended": "⚡",
+      "enterprise_ready": "🏢",
+      "cloud_native": "☁️"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "@odata.type": "#Drive.v1_19_0.Drive",
+  "@odata.id": "/redfish/v1/Storage/1/Drives/1",
+  "Id": "1",
+  "Name": "Enterprise NVMe SSD 1",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 7680352462848,
+  "Protocol": "NVMe",
+  "MediaType": "SSD",
+  "Manufacturer": "SuperFast Storage Inc.",
+  "Model": "SFS-EME-NVMe-7.7TB",
+  "SerialNumber": "SNF7C18X4P2A1Q7",
+  "BlockSizeBytes": 4096,
+  "RotationSpeedRPM": null,
+  "Identifiers": [
+    {
+      "DurableName": "naa.5002538c4037e5dc",
+      "DurableNameFormat": "NAA"
+    }
+  ],
+  "PartNumber": "SFS-77NVME-2025",
+  "Revision": "FW2025.02.11",
+  "EncryptionAbility": "SelfEncryptingDrive",
+  "EncryptionStatus": "Unlocked",
+  "HotspareType": "None",
+  "PredictedMediaLifeLeftPercent": 92,
+  "FailurePredicted": false,
+  "Operations": [
+    {
+      "OperationName": "Rebuild",
+      "PercentageComplete": 0
+    }
+  ],
+  "StatusIndicators": [
+    "OK"
+  ],
+  "CapableSpeedGbs": 32,
+  "NegotiatedSpeedGbs": 32,
+  "Location": [
+    {
+      "Info": "Bay 3",
+      "InfoFormat": "Slot"
+    }
+  ],
+  "Links": {
+    "Volumes": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Volumes/1"
+      }
+    ],
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1"
+      }
+    ]
+  },
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_5_0.DriveExtension",
+      "EnduranceBytes": 14000000000000,
+      "Workload": "MixedUse",
+      "PowerOnHours": 2176,
+      "TemperatureCelsius": 31,
+      "WearLevel": {
+        "Type": "Percentage",
+        "Value": 8
+      },
+      "SMART": {
+        "AvailableSpare": 97,
+        "UsedSpare": 1,
+        "CriticalWarning": false,
+        "Temperature": 31,
+        "PercentageUsed": 8
+      }
+    }
+  }
+}

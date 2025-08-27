@@ -1,0 +1,11 @@
+{
+  "@odata.type": "#Chassis.v1_20_0.Chassis",
+  "@odata.id": "/redfish/v1/Chassis/1U",
+  "Id": "1U",
+  "Name": "1U Rack Chassis",
+  "ChassisType": "RackMount",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK"
+  }
+}

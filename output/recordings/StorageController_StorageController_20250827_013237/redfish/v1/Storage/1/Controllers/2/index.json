@@ -1,0 +1,90 @@
+{
+  "@odata.type": "#StorageController.v1_19_0.StorageController",
+  "@odata.id": "/redfish/v1/Storage/1/Controllers/2",
+  "Id": "1",
+  "Name": "Enterprise NVMe Storage Controller",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Manufacturer": "SNIA Reference",
+  "Model": "SNIA-XC9000",
+  "SerialNumber": "SNIA25SDC90010234",
+  "FirmwareVersion": "9.7.2-2025A",
+  "PartNumber": "SNIA-XC9000-CTRL",
+  "AssetTag": "SDC25-CTRL-002",
+  "SupportedControllerProtocols": [
+    "NVMe",
+    "SAS",
+    "PCIe"
+  ],
+  "SupportedDeviceProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "ControllerRatesGbps": [
+    100
+  ],
+  "PCIeInterface": {
+    "PCIeType": "Gen5",
+    "Lanes": 16,
+    "PCIeDeviceId": "0001",
+    "PCIeFunctionNumber": 0
+  },
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/2/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/2/Drives/2"
+      }
+    ],
+    "StorageServices": [
+      {
+        "@odata.id": "/redfish/v1/StorageServices/2"
+      }
+    ],
+    "ManagedBy": [
+      {
+        "@odata.id": "/redfish/v1/Managers/1"
+      }
+    ]
+  },
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_2_0.StorageControllerExtension",
+      "EncryptionCapabilities": {
+        "SupportedEncryptionTypes": [
+          "AES-256-XTS",
+          "FIPS140-2"
+        ],
+        "KeyManagement": "LocalKeyManager",
+        "DataAtRestProtection": true,
+        "DataInTransitProtection": true
+      },
+      "Virtualization": {
+        "SRIOVEnabled": true,
+        "MaxVirtualFunctions": 64
+      },
+      "PerformanceMetrics": {
+        "MaxIOPS": 3200000,
+        "MaxThroughputMBps": 25000,
+        "CurrentTemperatureCelsius": 42
+      },
+      "AdvancedRAIDFeatures": {
+        "SupportedRAIDLevels": [
+          "RAID0",
+          "RAID1",
+          "RAID5",
+          "RAID6",
+          "RAID10"
+        ],
+        "CacheMemoryGiB": 16,
+        "BatteryBackup": true
+      }
+    }
+  }
+}

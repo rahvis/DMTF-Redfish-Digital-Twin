@@ -1,0 +1,77 @@
+{
+  "@odata.type": "#Drive.v1_19_0.Drive",
+  "@odata.id": "/redfish/v1/Storage/1/Drives/2",
+  "Id": "2",
+  "Name": "Enterprise NVMe SSD Drive 2",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Manufacturer": "Samsung",
+  "Model": "PM1743 3.84TB NVMe Gen4",
+  "SerialNumber": "S6V0NX0R702345L",
+  "CapacityBytes": 3840000000000,
+  "BlockSizeBytes": 4096,
+  "MediaType": "SSD",
+  "Protocol": "NVMe",
+  "RotationSpeedRPM": 0,
+  "Revision": "E2F2",
+  "PartNumber": "MZQL23T8HBLB-00A07",
+  "StatusIndicator": "OK",
+  "Location": [
+    {
+      "Info": "U.2 Bay 5",
+      "InfoFormat": "Slot"
+    }
+  ],
+  "Identifiers": [
+    {
+      "DurableNameFormat": "NAA",
+      "DurableName": "5002538C406FCD2E"
+    }
+  ],
+  "HotspareType": "None",
+  "Operations": [
+    {
+      "OperationName": "FirmwareUpdate",
+      "PercentageComplete": 100,
+      "AssociatedTask": {
+        "@odata.id": "/redfish/v1/TaskService/Tasks/23"
+      }
+    }
+  ],
+  "EncryptionAbility": "SelfEncryptingDrive",
+  "EncryptionStatus": "Unlocked",
+  "FailurePredicted": false,
+  "Links": {
+    "Volumes": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Volumes/3"
+      }
+    ],
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1"
+      }
+    ]
+  },
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.v1_2_0.DriveExtension",
+      "EnduranceBytes": 7000000000000,
+      "DataUnitsWritten": 2500000000000,
+      "DataUnitsRead": 3200000000000,
+      "TemperatureCelsius": 34,
+      "PowerOnHours": 1260,
+      "UncorrectableErrorCount": 0,
+      "CorrectableErrorCount": 8,
+      "WearLevelPercentage": 12,
+      "NVMe": {
+        "NamespaceCount": 4,
+        "PCIeGen": "Gen4",
+        "PCIeLanes": 4
+      }
+    }
+  }
+}

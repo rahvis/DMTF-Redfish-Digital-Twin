@@ -1,0 +1,14 @@
+{
+  "@odata.type": "#StorageController.v1_6_0.StorageController",
+  "@odata.id": "/redfish/v1/Storage/1/Controllers/1",
+  "Id": "1",
+  "Name": "Integrated Storage Controller 1",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK"
+  },
+  "Manufacturer": "Contoso",
+  "Model": "CS3000-8i",
+  "SerialNumber": "2M220100SL",
+  "FirmwareVersion": "2.1.0.1023"
+}

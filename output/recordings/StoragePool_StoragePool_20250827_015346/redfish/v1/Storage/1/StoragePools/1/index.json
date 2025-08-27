@@ -1,0 +1,186 @@
+{
+  "@odata.type": "#StoragePool.v1_13_0.StoragePool",
+  "@odata.id": "/redfish/v1/Storage/1/StoragePools/1",
+  "Id": "1",
+  "Name": "Enterprise NVMe Tier-1 Pool",
+  "Description": "High-performance NVMe storage pool for enterprise workloads, supporting advanced data services and composability.",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Capacity": {
+    "AllocatedBytes": 11258999068426240,
+    "ConsumedBytes": 10995116277760,
+    "GuaranteedBytes": 10737418240,
+    "ProvisionedBytes": 12884901888000,
+    "DataReductionRatio": 2.5,
+    "DataProtectionLevel": "RAID6",
+    "SpareCapacityBytes": 2147483648000
+  },
+  "CapacitySources": [
+    {
+      "ProvidingDrives": [
+        {
+          "@odata.id": "/redfish/v1/Drives/1"
+        },
+        {
+          "@odata.id": "/redfish/v1/Drives/2"
+        },
+        {
+          "@odata.id": "/redfish/v1/Drives/3"
+        },
+        {
+          "@odata.id": "/redfish/v1/Drives/4"
+        }
+      ],
+      "ProvidedCapacity": {
+        "AllocatedBytes": 11258999068426240
+      }
+    }
+  ],
+  "StoragePoolType": [
+    "ThinProvisioned",
+    "AllFlash",
+    "NVMe"
+  ],
+  "SupportedRAIDTypes": [
+    "RAID6",
+    "RAID5",
+    "RAID10"
+  ],
+  "Redundancy": [
+    {
+      "Mode": "RAID6",
+      "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+      },
+      "MinNumMembers": 4,
+      "MaxNumMembers": 8,
+      "RedundancySet": [
+        {
+          "@odata.id": "/redfish/v1/Drives/1"
+        },
+        {
+          "@odata.id": "/redfish/v1/Drives/2"
+        },
+        {
+          "@odata.id": "/redfish/v1/Drives/3"
+        },
+        {
+          "@odata.id": "/redfish/v1/Drives/4"
+        }
+      ]
+    }
+  ],
+  "IOStatistics": {
+    "OperationsPerSecond": {
+      "Read": 750000,
+      "Write": 400000
+    },
+    "ThroughputMBps": {
+      "Read": 9000,
+      "Write": 5000
+    },
+    "AverageIOSizeBytes": {
+      "Read": 16384,
+      "Write": 8192
+    },
+    "LatencyUsec": {
+      "Read": 120,
+      "Write": 160
+    }
+  },
+  "ClientEndpoints": [
+    {
+      "@odata.id": "/redfish/v1/Endpoints/NVMeoF-Host-01"
+    },
+    {
+      "@odata.id": "/redfish/v1/Endpoints/NVMeoF-Host-02"
+    }
+  ],
+  "AllocatedPools": [
+    {
+      "@odata.id": "/redfish/v1/StoragePools/2"
+    }
+  ],
+  "Links": {
+    "Volumes": [
+      {
+        "@odata.id": "/redfish/v1/Volumes/Enterprise-Vol-01"
+      },
+      {
+        "@odata.id": "/redfish/v1/Volumes/Enterprise-Vol-02"
+      }
+    ],
+    "DedicatedSpareDrives": [
+      {
+        "@odata.id": "/redfish/v1/Drives/5"
+      }
+    ],
+    "StorageSystems": [
+      {
+        "@odata.id": "/redfish/v1/StorageSystems/1"
+      }
+    ]
+  },
+  "SupportedClassesOfService": [
+    {
+      "@odata.id": "/redfish/v1/StorageServices/1/ClassesOfService/Gold"
+    },
+    {
+      "@odata.id": "/redfish/v1/StorageServices/1/ClassesOfService/Silver"
+    }
+  ],
+  "SupportedProvisioningPolicies": [
+    "Thin",
+    "Thick",
+    "Deduplication",
+    "Compression"
+  ],
+  "Replication": {
+    "SupportedReplicationTypes": [
+      "Synchronous",
+      "Asynchronous"
+    ],
+    "ReplicationEnabled": true,
+    "ReplicationTargets": [
+      {
+        "@odata.id": "/redfish/v1/StoragePools/RemoteSitePool"
+      }
+    ]
+  },
+  "Encryption": {
+    "EncryptionTypes": [
+      "SelfEncryptingDrive",
+      "SoftwareEncryption"
+    ],
+    "EncryptionEnabled": true,
+    "KeyManagement": {
+      "KeyManagerType": "KMIP",
+      "KeyManagerUri": "kmip://keymanager.enterprise.local:5696"
+    }
+  },
+  "DataProtection": {
+    "SnapshotEnabled": true,
+    "SnapshotSchedule": "Every 4 hours",
+    "RemoteMirroringEnabled": true
+  },
+  "Oem": {
+    "SNIA": {
+      "ComposabilityEnabled": true,
+      "QoS": {
+        "MaxIOPS": 1000000,
+        "MinIOPS": 10000,
+        "BurstIOPS": 2000000,
+        "Priority": "High"
+      },
+      "Metrics": {
+        "WearLevelPercent": 12,
+        "TemperatureCelsius": 38,
+        "PowerConsumptionWatts": 75
+      }
+    }
+  }
+}

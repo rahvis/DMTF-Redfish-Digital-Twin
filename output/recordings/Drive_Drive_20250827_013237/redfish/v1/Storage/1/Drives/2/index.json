@@ -1,0 +1,89 @@
+{
+  "@odata.type": "#Drive.v1_19_0.Drive",
+  "@odata.id": "/redfish/v1/Storage/1/Drives/2",
+  "Id": "2",
+  "Name": "Enterprise NVMe SSD 2",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK",
+    "Oem": {
+      "SNIA": {
+        "PredictedMediaLifeLeftPercent": 97,
+        "TemperatureCelsius": 34,
+        "WearLevel": {
+          "AverageEraseCount": 18,
+          "MaxEraseCount": 21
+        }
+      }
+    }
+  },
+  "CapacityBytes": 7680000000000,
+  "Protocol": "NVMe",
+  "MediaType": "SSD",
+  "Manufacturer": "SNIA Reference Storage",
+  "Model": "XR-NVMe-7.68TB-DC",
+  "SerialNumber": "NVME2025SDC0002",
+  "BlockSizeBytes": 4096,
+  "RotationSpeedRPM": null,
+  "Identifiers": [
+    {
+      "DurableName": "5000CCA012345672",
+      "DurableNameFormat": "NAA"
+    }
+  ],
+  "PartNumber": "XRNVME7680-DC",
+  "Revision": "E2B7",
+  "StatusIndicator": "OK",
+  "Operations": [
+    {
+      "OperationName": "Rebuild",
+      "PercentageComplete": 100,
+      "AssociatedTask": {
+        "@odata.id": "/redfish/v1/TaskService/Tasks/102"
+      }
+    }
+  ],
+  "Location": [
+    {
+      "Info": "Rear Bay 4",
+      "InfoFormat": "Slot"
+    }
+  ],
+  "HotspareType": "None",
+  "EncryptionAbility": "SelfEncryptingDrive",
+  "EncryptionStatus": "Unlocked",
+  "FailurePredicted": false,
+  "Oem": {
+    "SNIA": {
+      "PerformanceMetrics": {
+        "ReadIOPS": 850000,
+        "WriteIOPS": 370000,
+        "ReadThroughputMBps": 6500,
+        "WriteThroughputMBps": 3700
+      },
+      "NamespaceCount": 4,
+      "EnduranceBytes": 14000000000000,
+      "NVMeMultipathEnabled": true,
+      "UniqueDriveId": "urn:uuid:2c9e013e-8e2d-5a4f-b1c6-2025sdc-drive2",
+      "SubsystemNQN": "nqn.2025-08.com.snia.swordfish:storage1.drive2"
+    }
+  },
+  "Links": {
+    "Volumes": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Volumes/vol1"
+      }
+    ],
+    "Chassis": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/Enclosure1"
+      }
+    ],
+    "Endpoints": [
+      {
+        "@odata.id": "/redfish/v1/Fabrics/NVMeoF/Endpoints/ep2"
+      }
+    ]
+  }
+}

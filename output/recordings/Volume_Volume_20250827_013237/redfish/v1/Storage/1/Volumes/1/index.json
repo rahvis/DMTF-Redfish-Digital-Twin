@@ -1,0 +1,135 @@
+{
+  "@odata.type": "#Volume.v1_19_0.Volume",
+  "@odata.id": "/redfish/v1/Storage/1/Volumes/1",
+  "Id": "1",
+  "Name": "Enterprise NVMe Volume 1",
+  "Description": "High-performance NVMe SSD volume with advanced data services for SNIA SDC 2025 demo",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 2147483648000,
+  "AllocatedBytes": 1073741824000,
+  "VolumeType": "RawDevice",
+  "Encrypted": true,
+  "EncryptionTypes": [
+    "AES-256-XTS",
+    "FIPS140-2"
+  ],
+  "BlockSizeBytes": 4096,
+  "Identifiers": [
+    {
+      "DurableNameFormat": "NAA",
+      "DurableName": "naa.6001405c8e6e000000e3b9b22a000001"
+    },
+    {
+      "DurableNameFormat": "UUID",
+      "DurableName": "e1b7fa72-4184-11ee-be56-0242ac120002"
+    }
+  ],
+  "ReplicaInfo": {
+    "ReplicaType": "Snapshot",
+    "ReplicaRole": "Source",
+    "ReplicaTargets": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Volumes/2"
+      }
+    ]
+  },
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/2"
+      }
+    ],
+    "Oem": {
+      "SNIA": {
+        "DataProtection": {
+          "RaidType": [
+            "RAID5"
+          ],
+          "DataReduction": {
+            "CompressionEnabled": true,
+            "DeduplicationEnabled": true
+          },
+          "SnapshotEnabled": true,
+          "CloneEnabled": true,
+          "ReplicationEnabled": true
+        }
+      }
+    }
+  },
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.Volume.v1_2_0.Volume",
+      "ThinProvisioned": true,
+      "ProvisioningPolicy": {
+        "ProvisioningType": "Thin",
+        "OverprovisioningRatio": 1.2
+      },
+      "StorageTiering": {
+        "CurrentTier": "Performance",
+        "SupportedTiers": [
+          "Performance",
+          "Capacity"
+        ]
+      },
+      "FastCloneSupport": true,
+      "ConsistencyGroup": {
+        "@odata.id": "/redfish/v1/Storage/1/ConsistencyGroups/1"
+      },
+      "AccessCapabilities": [
+        "Read",
+        "Write",
+        "Snapshot",
+        "Clone"
+      ]
+    }
+  },
+  "AccessCapabilities": [
+    "Read",
+    "Write",
+    "Append",
+    "Snapshot"
+  ],
+  "Operations": [
+    {
+      "OperationName": "Initialize",
+      "PercentageComplete": 100,
+      "AssociatedTask": {
+        "@odata.id": "/redfish/v1/TaskService/Tasks/42"
+      }
+    }
+  ],
+  "VolumeUsage": "Data",
+  "CapacitySources": [
+    {
+      "ProvidedCapacityBytes": 2147483648000,
+      "ConsumedBytes": 1073741824000,
+      "StoragePools": [
+        {
+          "@odata.id": "/redfish/v1/StoragePools/1"
+        }
+      ]
+    }
+  ],
+  "Actions": {
+    "#Volume.Initialize": {
+      "target": "/redfish/v1/Storage/1/Volumes/1/Actions/Volume.Initialize",
+      "InitializeType@Redfish.AllowableValues": [
+        "Fast",
+        "Slow"
+      ]
+    },
+    "#Volume.Snapshot": {
+      "target": "/redfish/v1/Storage/1/Volumes/1/Actions/Volume.Snapshot"
+    },
+    "#Volume.Clone": {
+      "target": "/redfish/v1/Storage/1/Volumes/1/Actions/Volume.Clone"
+    }
+  }
+}

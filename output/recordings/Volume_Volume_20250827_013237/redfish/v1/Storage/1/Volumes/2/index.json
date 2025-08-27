@@ -1,0 +1,103 @@
+{
+  "@odata.type": "#Volume.v1_19_0.Volume",
+  "@odata.id": "/redfish/v1/Storage/1/Volumes/2",
+  "Id": "2",
+  "Name": "Enterprise-Data-Volume-02",
+  "Description": "High-performance NVMe enterprise volume with Swordfish extensions, suitable for SDC 2025 demonstration.",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "CapacityBytes": 10995116277760,
+  "VolumeType": "RawDevice",
+  "Encrypted": true,
+  "EncryptionTypes": [
+    "AES256-XTS"
+  ],
+  "BlockSizeBytes": 4096,
+  "Identifiers": [
+    {
+      "DurableNameFormat": "NAA",
+      "DurableName": "naa.6001405dfd8f9d2012e4b8b123456789"
+    }
+  ],
+  "ReplicaInfo": {
+    "ReplicaType": "Snapshot",
+    "ReplicaState": "Synchronized",
+    "ReplicaRole": "Source"
+  },
+  "AccessCapabilities": [
+    "Read",
+    "Write",
+    "Append"
+  ],
+  "ProvisioningPolicy": "Thin",
+  "Optimized": true,
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Systems/1/Storage/Drives/22"
+      },
+      {
+        "@odata.id": "/redfish/v1/Systems/1/Storage/Drives/23"
+      }
+    ],
+    "Oem": {
+      "SNIA": {
+        "StoragePool": {
+          "@odata.id": "/redfish/v1/Storage/StoragePools/PoolA"
+        },
+        "ReplicationTargets": [
+          {
+            "@odata.id": "/redfish/v1/Storage/Volumes/3"
+          }
+        ]
+      }
+    }
+  },
+  "Operations": [
+    {
+      "OperationName": "Initialize",
+      "PercentageComplete": 100,
+      "AssociatedTask": {
+        "@odata.id": "/redfish/v1/TaskService/Tasks/235"
+      }
+    }
+  ],
+  "Oem": {
+    "SNIA": {
+      "@odata.type": "#SNIA.VolumeExt.v1_1_0.Volume",
+      "DataReduction": {
+        "CompressionEnabled": true,
+        "DeduplicationEnabled": true,
+        "EffectiveCapacityBytes": 16492674416640
+      },
+      "TieringPolicy": "Auto",
+      "QoS": {
+        "MaxIOPS": 120000,
+        "MinIOPS": 40000,
+        "MaxMBps": 9000,
+        "MinMBps": 3000,
+        "BurstIOPS": 250000
+      },
+      "MultiAttachEnabled": true
+    }
+  },
+  "Actions": {
+    "#Volume.Initialize": {
+      "target": "/redfish/v1/Storage/Volumes/2/Actions/Volume.Initialize",
+      "InitializeType@Redfish.AllowableValues": [
+        "Fast",
+        "Slow",
+        "Overwrite"
+      ]
+    },
+    "#Volume.Snapshot": {
+      "target": "/redfish/v1/Storage/Volumes/2/Actions/Volume.Snapshot"
+    },
+    "#Volume.Replicate": {
+      "target": "/redfish/v1/Storage/Volumes/2/Actions/Volume.Replicate"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "@odata.type": "#StorageController.v1_18_0.StorageController",
+  "@odata.id": "/redfish/v1/Storage/1/Controllers/1",
+  "Id": "1",
+  "Name": "Enterprise NVMe Storage Controller",
+  "Status": {
+    "State": "Enabled",
+    "Health": "OK",
+    "HealthRollup": "OK"
+  },
+  "Manufacturer": "SNIA-Redfish Demo Systems",
+  "Model": "XSC9000-24G4N-NVMeoF",
+  "SerialNumber": "SNIA2025SDC0001",
+  "PartNumber": "XSC9000-24G4N-REVB",
+  "SKU": "XSC9K-24G4N-ENT",
+  "FirmwareVersion": "5.2.3-enterprise",
+  "SupportedControllerProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "SupportedDeviceProtocols": [
+    "NVMe",
+    "SAS",
+    "SATA"
+  ],
+  "ControllerCapabilities": {
+    "DataProtectionCapabilities": [
+      "RAID5",
+      "RAID6",
+      "RAID10",
+      "RAID50"
+    ],
+    "EncryptionTypes": [
+      "SelfEncryptingDrive",
+      "ControllerAssisted",
+      "None"
+    ],
+    "SupportedRAIDTypes": [
+      "RAID0",
+      "RAID1",
+      "RAID5",
+      "RAID6",
+      "RAID10",
+      "RAID50"
+    ],
+    "NVMeMultipath": true,
+    "PersistentMemorySupported": true,
+    "ControllerHotSpareSupported": true
+  },
+  "PCIeInterface": {
+    "PCIeType": "Gen4",
+    "Lanes": 16
+  },
+  "Links": {
+    "Drives": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/1"
+      },
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Drives/2"
+      }
+    ],
+    "NetworkPorts": [
+      {
+        "@odata.id": "/redfish/v1/Storage/1/Controllers/1/NetworkPorts/1"
+      }
+    ],
+    "PCIeDevices": [
+      {
+        "@odata.id": "/redfish/v1/Chassis/1/PCIeDevices/1"
+      }
+    ]
+  },
+  "SupportedLinkTypes": [
+    "PCIe4",
+    "Ethernet40G",
+    "FibreChannel32G"
+  ],
+  "Location": {
+    "PartLocation": {
+      "ServiceLabel": "STCTL-1",
+      "LocationType": "Slot",
+      "LocationOrdinalValue": 1
+    }
+  },
+  "Oem": {
+    "SNIA": {
+      "StorageTieringSupported": true,
+      "DataReduction": {
+        "Compression": true,
+        "Deduplication": true
+      },
+      "AdvancedTelemetry": true,
+      "NVMeoF": {
+        "Enabled": true,
+        "DiscoveryControllers": [
+          {
+            "IPAddress": "192.168.100.10",
+            "Port": 8009
+          }
+        ],
+        "SupportedTransports": [
+          "RDMA",
+          "TCP"
+        ]
+      }
+    }
+  }
+}
