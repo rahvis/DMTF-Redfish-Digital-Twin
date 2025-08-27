@@ -944,8 +944,3 @@ scenario_ai_ml_ready_ComputerSystem_20250827_021721
 Select an option [1/2/3/4/5/6/7/8/9]: 9
 Exiting...
 ```
-License
--------
-
-This project is provided as-is for demonstration and development purposes. Review and adapt to your licensing needs.
-
