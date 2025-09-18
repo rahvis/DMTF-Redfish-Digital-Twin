@@ -6,6 +6,9 @@ Overview
 
 This repository provides a standards-compliant, AI-driven Digital Twin system that simulates storage and datacenter devices using DMTF Redfish and SNIA Swordfish specifications. The system leverages Azure OpenAI (via LangChain) to generate realistic resource models, validates them against schemas and policy rules, and writes outputs to a Redfish-compliant folder hierarchy. The generated recordings can be consumed by Redfish-aware tooling as if they were real devices.
 
+Slides
+--------
+https://github.com/rahvis/SNIASDC2025
 
 Motivation
 ----------
